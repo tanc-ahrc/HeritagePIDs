@@ -1,7 +1,5 @@
 <?php
 
-//require_once '../../d3-process-map/common.php';
-
 $site = getRemoteJsonDetails("site.json", false, true);
 $pages = getRemoteJsonDetails("pages.json", false, true);
 $raw_subpages = getRemoteJsonDetails("sub-pages.json", false, true);
