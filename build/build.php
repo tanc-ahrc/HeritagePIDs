@@ -202,12 +202,9 @@ function buildExamplePages ()
 		{unlink ($file);}
 	
 	//foreach ($pages as $name => $d) {$bsc[$name] = array();}
-	prg(0, $pages);
-	prg(0, $raw_subpages);
 	
 	foreach ($raw_subpages as $k => $a)
-		{$a["name"] = $k;
-		 prg (1, $a);
+		{$a["name"] = $k;		 
 		 $a["bcs"] = array_reverse(loopBreadcrumbs ($k));
 		 $raw_subpages[$k] = $a;
 		 $subpages[$a["parent"]][]= $a;}
