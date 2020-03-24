@@ -13,5 +13,9 @@
 			"link": "https://github.com/",
 			"logo": "graphics/github logo.png",
 			"alt": "GitHub"}
-		}
+		},
+	"extra_js_scripts": [], 
+	"extra_css_scripts": [],
+	"extra_css" => "",
+	"extra_js" => ""
 	}
