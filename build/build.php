@@ -1,45 +1,51 @@
 <?php
 
-
 $site = getRemoteJsonDetails("site.json", false, true);
 if (!is_array($site) or count($site) < 1)
 	{exit("\nERROR: Sorry your site.json file has not been opened correctly please check you json formatting and try vaildating it using a web-site similar to https://jsonlint.com/\n\n");}
+
+// The original system used an additional sub-pages file, so just add any extra sub-pages still listed there
+if (is_file("sub-pages.json"))
+	{$expages = getRemoteJsonDetails("sub-pages.json", false, true);}
+else
+	{$expages = array();}
+
+	
+$pnames = array();	
 $pages = getRemoteJsonDetails("pages.json", false, true);
 if (!is_array($pages) or count($pages) < 1)
 	{exit("\nERROR: Sorry your pages.json file has not been opened correctly please check you json formatting and try vaildating it using a web-site similar to https://jsonlint.com/\n\n");}
-$raw_subpages = getRemoteJsonDetails("sub-pages.json", false, true);
-if (!is_array($raw_subpages) or count($raw_subpages) < 1)
-	{exit("\nERROR: Sorry your sub-pages.json file has not been opened correctly please check you json formatting and try vaildating it using a web-site similar to https://jsonlint.com/\n\n");}
+else
+	{$pages = pagesCheck(array_merge($expages, $pages));}
+
+$extensionPages = array("timeline", "mirador");
 
 $menuList = array();
 $subpages = array();
 $bcs = array();
 
+$fcount = 1;
+$footnotes = array();
+
 $defaults = array(
-	"metaDescription" => "The National Gallery, London, ".
-		"Scientific Department, is involved with research within a wide ".
-		"range of fields, this page presents an example of some of the ".
-		"work carried out.",
-	"metaKeywords" => "The National Gallery, London, ".
-		"National Gallery London, Scientific, Research, Heritage, Culture",
-	"metaAuthor" => "Joseph Padfield| joseph.padfield@ng-london.org.uk |".
-			"National Gallery | London UK | website@ng-london.org.uk |".
-			" www.nationalgallery.org.uk",
-	"metaTitle" => "NG Test Page",
-	"metaFavIcon" => "https://www.nationalgallery.org.uk/custom/ng/img/icons/favicon.ico",
+	"metaDescription" => "GitHub Project.",
+	"metaKeywords" => "GitHub, PHP, Javascript, Clone",
+	"metaAuthor" => "Me",
+	"metaTitle" => "Test Page",
+	"metaFavIcon" => "graphics/favicon.ico",
 	"extra_js_scripts" => array(), 
 	"extra_css_scripts" => array(),
 	"extra_css" => "",
 	"extra_js" => "",
 	"logo_link" => "",
-	"logo_path" => "graphics/ng-logo-white-100x40.png",
+	"logo_path" => "graphics/github pages.png",
 	"logo_style" => "",
 	"extra_onload" => "",
 	"topNavbar" => "",
 	"body" => "",
 	"fluid" => false,
 	"offcanvas" => false,
-	"footer" => "&copy; The National Gallery 2020</p>",
+	"footer" => "&copy; Me 2020</p>",
 	"footer2" => false,
 	"licence" => false,
 	"extra_logos" => array(),
@@ -51,11 +57,29 @@ $gdp = array_merge ($defaults, $site);
 $html_path = "../docs/";
 		
 buildExamplePages ();	
+
+function pagesCheck($pages)
+	{
+	global $pnames;
+	
+	$default = array(
+		"parent"=>"", "class"=>"", "file"=>"",
+		"title"=>"", "content"=>"", "content right"=>""
+		);
+
+	foreach ($pages as $k => $a)
+		{$pages[$k] = array_merge($default, $a);
+		 if (!$pages[$k]["parent"])
+			{$pnames[] = $k;}}
+
+	return($pages);
+  }
+	
+
 	
 function prg($exit=false, $alt=false, $noecho=false)
 	{
 	if ($alt === false) {$out = $GLOBALS;}
-	
 	else {$out = $alt;}
 	
 	ob_start();
@@ -74,7 +98,6 @@ function prg($exit=false, $alt=false, $noecho=false)
 	else {return ($out);}
 	}
 	
-
 function getRemoteJsonDetails ($uri, $format=false, $decode=false)
 	{if ($format) {$uri = $uri.".".$format;}
 	 $fc = file_get_contents($uri);
@@ -84,36 +107,44 @@ function getRemoteJsonDetails ($uri, $format=false, $decode=false)
 		{$output = $fc;}
 	 return ($output);}
 
-$fcount = 1;
-
 function countFootNotes($matches) {
-  global $fcount;
+  global $fcount, $footnotes;
+  $footnotes[] = $matches[1];
   $out = '<sup><a id="ref'.$fcount.'" href="#section'.$fcount.'">['.$fcount.']</a></sup>';
   $fcount++;
   return($out);
 }
 
 function addLinks($matches) {
-  $out = "<a href='$matches[0]'>$matches[0]</a>";
+	if (count($matches) > 1)
+		{$out = "<a href='$matches[2]'>$matches[1]</a>";}
+	else
+		{$out = "<a href='$matches[0]'>$matches[0]</a>";}
   return($out);
 }
 
-function parseFootNotes ($text, $footnotes, $sno=1)
+function parseLinks ($text, $sno=1)
 	{
-	global $fcount;
+	global $fcount, $footnotes;
 	$fcount = $sno;
 	
-	$text = preg_replace_callback('/\[[@][@]\]/', 'countFootNotes', $text);
+	$text = preg_replace_callback('/\[([^\]]+)[|]([^\]]+)\]/', 'addLinks', $text);
+	$text = preg_replace_callback('/\[[@][@]([^\]]+)\]/', 'countFootNotes', $text);
+
+	//Extract the footnotes for this section of the text
+	$use = array_slice($footnotes, ($sno-1), ($fcount-1));
+	
 	$text = $text . "<div class=\"foonote\"><ul>";
-	foreach ($footnotes as $j => $str)
-		{$k = $j + 1;
+	if ($use) {$text = $text . "<hr/>";}
+	foreach ($use as $j => $str)
+		{$k = $j + $sno;
 		 $str = preg_replace_callback('/http[^\s]+/', 'addLinks', $str);
 		 $text = $text."<li id=\"section${k}\"><a href=\"#ref${k}\">[${k}]</a> $str</li>";}
 	
 	$text = $text . "</ul></div>";
 	
 	return ($text);	
-	}		
+	}	
 
 
 function buildSimpleBSGrid ($bdDetails = array())
@@ -152,9 +183,7 @@ function buildSimpleBSGrid ($bdDetails = array())
 		}
 
 function loopMenus ($str, $key, $arr, $no)
-	{
-	global $pages, $raw_subpages;
-
+	{		
 	$str .=
 		'<!-- Dropdown Loop '.$no.' -->';
             
@@ -180,9 +209,8 @@ function loopMenus ($str, $key, $arr, $no)
 	
 function buildTopNav ($name, $bcs=false)
 	{
-	global $pages, $menuList;
+	global $pages, $pnames, $menuList;
 	
-	$pnames = array_keys($pages);
 	$active = array("active", '<span class="sr-only">(current)</span>');
 	$html = "<div class=\"collapse navbar-collapse\" id=\"navbarsExampleDefault\"><ul class=\"navbar-nav\">
 ";
@@ -225,22 +253,14 @@ function buildTopNav ($name, $bcs=false)
 	
 function loopBreadcrumbs ($name, $arr=array())
 	{
-	global $pages, $raw_subpages;
+	global $pages;
 	
 	$arr[] = $name;
 	
-	if ($name and !isset($pages[$name]) and isset($raw_subpages[$name]))
-		{$arr = loopBreadcrumbs ($raw_subpages[$name]["parent"], $arr);}	
+	if ($name and $pages[$name]["parent"])
+		{$arr = loopBreadcrumbs ($pages[$name]["parent"], $arr);}	
 	
 	return ($arr);
-	}
-
-function buildMenuList ($a)
-	{
-	global $menuList;
-	foreach ($raw_subpages as $k => $a)
-		{}
-	
 	}
 	
 function buildExamplePages ()
@@ -257,23 +277,18 @@ function buildExamplePages ()
 	// to commit at least one new file as thus not return an error.
 	writeTSPage ();
 
-	//foreach ($pages as $name => $d)
-	//	{$menuList[$name] = array();}
-
-	foreach ($raw_subpages as $k => $a)
-		{$a["name"] = $k;		 
-		 $a["bcs"] = array_reverse(loopBreadcrumbs ($k));
-		 $tml = implode ("']['", $a["bcs"]);
-		 $tml = "\$menuList['".$tml."'] = array();";
-		 eval($tml);	 
-		 $raw_subpages[$k] = $a;
-		 $subpages[$a["parent"]][]= $a;}
-	
-	foreach ($raw_subpages as $k => $a)
-		{writePage ($k, $a, false);}
+	foreach ($pages as $k => $a) {
+		if (isset($a["parent"]) and $a["parent"]) {
+			$a["name"] = $k;		 
+			$a["bcs"] = array_reverse(loopBreadcrumbs ($k));
+			$tml = implode ("']['", $a["bcs"]);
+			$tml = "\$menuList['".$tml."'] = array();";
+			eval($tml);	 
+			$pages[$k] = $a;
+			$subpages[$a["parent"]][]= $a;}}
 		 
 	foreach ($pages as $name => $d)
-		{writePage ($name, $d, true);}
+		{writePage ($name, $d);}
 	}
 
 function buildBreadcrumbs ($arr)
@@ -318,23 +333,30 @@ function writeTSPage ()
 	fclose($myfile);
 	}
 	
-function writePage ($name, $d, $tnav=true)
-	{
-	global $subpages, $gdp, $menuList;
-	
+function writePage ($name, $d)
+	{	
+	global $gdp, $menuList, $extensionPages, $fcount, $footnotes;
+
+	$footnotes = array();	
 	$pd = $gdp;
 		
 	if ($name == "home") {$use= "index";}
 	else {$use = $name;}
 		
-	if ($tnav)
-		{$pd["topNavbar"] = buildTopNav ($name);
-		 $pd["breadcrumbs"] = "";}
-	else
+	if ($d["parent"])
 		{$pd["topNavbar"] = buildTopNav ($d["bcs"][0]);
 		 $pd["breadcrumbs"] = buildBreadcrumbs ($d["bcs"]);}
+	else
+		{$pd["topNavbar"] = buildTopNav ($name);
+		 $pd["breadcrumbs"] = "";}
 	
-	$home = parseFootNotes ($d["content"], $d["footnotes"], 1);
+
+	if (in_array($d["class"], $extensionPages))
+		{$ta = buildExtensionContent($name, $d, $pd);
+		 $content = $ta[0];
+		 $pd = $ta[1];}
+	else
+		{$content = parseLinks ($d["content"], 1);}
 				
 	$pd["grid"] = array(
 		"topjumbotron" => "<h2>$d[title]</h2>",
@@ -348,39 +370,16 @@ function writePage ($name, $d, $tnav=true)
 			array(
 				array (
 					"class" => "col-12 col-lg-12",
-					"content" => $home)
+					"content" => $content)
 				)));
 							
 	if ($d["content right"])
-		{$pd["grid"]["rows"][1][0]["class"] = "col-6 col-lg-6";
+		{$d["content right"] = parseLinks ($d["content right"], $fcount);
+		 $pd["grid"]["rows"][1][0]["class"] = "col-6 col-lg-6";
 		 $pd["grid"]["rows"][1][1] = 
 				array (
 					"class" => "col-6 col-lg-6",
 					"content" => $d["content right"]);}
-
-	// Button links replaced with nested dropdown in nav bar				
-	/*if (isset($subpages[$name]))
-		{
-		$crows = "";
-			
-		foreach ($subpages[$name] as $g => $a)
-			{
-			ob_start();			
-			echo <<<END
-			<tr>
-				<td>
-					<a class="btn btn-outline-dark btn-block" href="$a[name].html" role="button">$a[title]</a>
-				</td>
-			</tr>
-END;
-			$crows .= ob_get_contents();
-			ob_end_clean(); // Don't send output to client			
-			}
-			
-		$pd["grid"]["rows"][] = array(array (
-			"class" => "col-12 col-lg-12",	
-			"content" => '<table width="100%">'.$crows.'</table></br>'));						
-		}*/
 					
 	$pd["body"] = buildSimpleBSGrid ($pd["grid"]);
 	$html = buildBootStrapNGPage ($pd);
@@ -388,76 +387,19 @@ END;
 	fwrite($myfile, $html);
 	fclose($myfile);
 	}
-
-function formatSubPages ($arr)
-	{
-	$items = "";
-	foreach ($arr as $g => $a)
-		{$items .= "<a class=\"dropdown-item\" href=\"$a[name].html\">".
-			"$a[title]</a>";}
-		
-	ob_start();			
-	echo <<<END
-<li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Sub Pages
-        </a>
-        <div class="dropdown-menu" aria-labelledby="navbarDropdown">          
-          $items
-        </div>
-      </li>
-END;
-	$subpages = ob_get_contents();
-	ob_end_clean(); // Don't send output to client
-
-	return ($subpages);
-	}
 	
 function buildBootStrapNGPage ($pageDetails=array())
-	{	
+	{
 	$default_scripts = array(
 	"js-scripts" => array (
-		"jquery" => "js/jquery-3.4.1.min.js",
-		"tether" => "js/tether.min.js",
-		"bootstrap" => "js/bootstrap.min.js"),
+		"jquery" => "https://unpkg.com/jquery@3.4.1/dist/jquery.min.js",
+		"tether" => "https://unpkg.com/tether@1.4.7/dist/js/tether.min.js",
+		"bootstrap" => "https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.min.js"),
 	"css-scripts" => array(
 		"fontawesome" => "https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css",
-		"main" => "css/main.css",
-		"bootstrap" => "css/bootstrap.min.css"));
-
-	/* Added before
-	 $defaults = array(
-		"metaDescription" => "The National Gallery, London, ".
-			"Scientific Department, is involved with research within a wide ".
-			"range of fields, this page presents an example of some of the ".
-			"work carried out.",
-		"metaKeywords" => "The National Gallery, London, ".
-			"National Gallery London, Scientific, Research, Heritage, Culture",
-		"metaAuthor" => "Joseph Padfield| joseph.padfield@ng-london.org.uk |".
-			"National Gallery | London UK | website@ng-london.org.uk |".
-			" www.nationalgallery.org.uk",
-		"metaTitle" => "NG Test Page",
-		"metaFavIcon" => "https://www.nationalgallery.org.uk/custom/ng/img/icons/favicon.ico",
-		"extra_js_scripts" => array(), 
-		"extra_css_scripts" => array(),
-		"extra_css" => "",
-		"extra_js" => "",
-		"logo_link" => "",
-		"logo_path" => "graphics/ng-logo-white-100x40.png",
-		"logo_style" => "",
-		"extra_onload" => "",
-		"topNavbar" => "",
-		"body" => "",
-		"fluid" => false,
-		"offcanvas" => false,
-		"footer" => "&copy; The National Gallery 2020</p>",
-		"footer2" => false,
-		"licence" => false,
-		"extra_logos" => array(),
-		"breadcrumbs" => false
-		);
-	 
-	$pageDetails = array_merge($defaults, $pageDetails);//*/
+		"bootstrap" => "https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css",
+		"main" => "css/main.css"
+		));
 
 	ob_start();			
 	echo <<<END
@@ -644,6 +586,203 @@ END;
 	ob_end_clean(); // Don't send output to client
 
 	return ($page_html);
-	}	
+	}
+
+
+function positionExtraContent ($str, $extra)
+	{
+	$count = 0;
+	$str = preg_replace('/\[[#][#]\]/', $extra, $str, -1, $count);
+
+	if (!$count)
+		{$str .= $extra;}
+
+	return ($str);	
+	}
+
+
+function listToManifest ($list)
+	{
+	$manifests = array();
+
+	foreach ($list as $k => $url)
+		{
+		$manifests[] = array(
+			"manifestUri" => $url,
+			"location" => "");
+		}
+
+	$manifests = json_encode($manifests);
+	
+	return($manifests);
+	}
+	
+function buildExtensionContent ($name, $d, $pd)
+	{
+	$content = parseLinks ($d["content"], 1);
+		
+	if ($d["class"] == "mirador")
+		{
+		$mans = '[]';
+		$wo = '[{"annotationLayer" : false, "bottomPanelVisible" : false}]';
+		$lo = '""';
+		
+		if (file_exists($d["file"]))
+			{
+			$dets = getRemoteJsonDetails($d["file"], false, true);
+			
+			if (!$dets)
+				{
+				$dets = getRemoteJsonDetails($d["file"], false, false);
+				$dets = explode(PHP_EOL, trim($dets));
+
+				if (preg_match('/^http.+/', $dets[0]))
+					{$mans = listToManifest ($dets);
+					 $use = $dets[0];
+				   $wo = '[{ "loadedManifest":"'.$use.'", "slotAddress":"row1", "viewType": "ImageView", "annotationLayer" : false, "bottomPanelVisible" : false}]';
+				   $lo = '"1x1"';}
+				}
+			else {
+				$mans = json_encode($dets["manifests"]);			 
+			 
+				if (isset($dets["windows"]))
+				 {
+					foreach ($dets["windows"]["slots"] as $k => $a)
+						{$dets["windows"]["slots"][$k]["bottomPanelVisible"] = false;
+						 $dets["windows"]["slots"][$k]["annotationLayer"] = false;}
+						
+					$wo = json_encode($dets["windows"]["slots"]);
+				  $lo = json_encode($dets["windows"]["layout"]);}
+				else
+				 {$use = $dets["manifests"][0]["manifestUri"];
+				  $wo = '[{ "loadedManifest":"'.$use.'", "slotAddress":"row1", "viewType": "ImageView", "annotationLayer" : false, "bottomPanelVisible" : false}]';
+				  $lo = '"1x1"';
+				 }
+			 }
+			}
+
+		// The mirador files could also be pulled from https://unpkg.com
+		// But version 2.7.2 did not seem to work, will try again once V3 is
+		// fully released. - jpadfield 30/03/20
+		$pd["extra_css_scripts"][] =
+			"https://tanc-ahrc.github.io/mirador/mirador/css/mirador-combined.css";
+		$pd["extra_js_scripts"][] =
+			"https://tanc-ahrc.github.io/mirador/mirador/mirador.min.js";
+		$pd["extra_js"] .= '
+	$(function() {
+       myMiradorInstance = Mirador({
+         id: "viewer",
+         layout: '.$lo.',
+         buildPath: "https://tanc-ahrc.github.io/mirador/mirador/",
+         data: '.$mans.',
+         "windowObjects": '.$wo.'
+       });
+     });';
+			//use to hide the label used for the first line which is just in place to provide a margin/padding on the left.
+			$pd["extra_css"] .= "
+#viewer {       
+      display: block;
+      width: 100%;
+      height: 600px;
+      position: relative;
+     }";
+
+		$content = positionExtraContent ($content, '<div id="viewer"></div>');
+		}
+	else if ($d["class"] == "timeline")
+		{			
+		if (!file_exists($d["file"]))
+			{die("ERROR: $d[file] missing\n");}
+		else
+			{
+			$dets = getRemoteJsonDetails($d["file"], false, true);
+
+			if (!isset($dets["start date"]))
+				{die("ERROR: $d[file] format problems - 'start date' not found\n");}
+		
+			$start = $dets["start date"];
+	
+			$prefs = array_keys($dets["groups"]);
+			$first = $prefs[0];
+
+			if (!isset($dets["project"])) {$dets["project"] = "Please add a project title";}
+			if (!isset($dets["margin"])) {$dets["margin"] = -3;}
+		
+			array_unshift($dets["groups"][$first]["stages"],
+				array("Add as a margin", "", $dets["margin"], $dets["margin"]));
+		
+			$str = "";
+			foreach ($dets["groups"] as $pref => $ga)
+				{
+				$str .= "\tsection $ga[title]\n";
+				$no = 0;
+				foreach ($ga["stages"] as $k => $a)
+					{
+					if ($a[1]) {$a[1] = "$a[1], ";}
+					$str .= "\t\t".$a[0]." :$a[1]$pref$no, ".dA($a[2]).
+						", ".dA($a[3])."\n";
+					$no++;
+					}
+				}
+
+			$pd["extra_js_scripts"][] =
+				"https://unpkg.com/mermaid@8.4.8/dist/mermaid.min.js";
+			$pd["extra_onload"] .= "
+	mermaid.ganttConfig = {
+    titleTopMargin:25,
+    barHeight:20,
+    barGap:4,
+    topPadding:50,
+    sidePadding:50
+		}
+//console.log(mermaid.render);
+  mermaid.initialize({startOnLoad:true, flowchart: { 
+    curve: 'basis' 
+  }});";
+			//use to hide the label used for the first line which is just in place to provide a margin/padding on the left.
+			$pd["extra_css"] .= "
+g a {color:inherit;}
+#".$first."0-text {display:none;}";
+
+		ob_start();
+		echo <<<END
+	<div class="mermaid">
+gantt
+       dateFormat  YYYY-MM-DD
+       title $dets[project]	
+       $str
+	</div>
+END;
+			$mcontent = ob_get_contents();
+			ob_end_clean(); // Don't send output to client
+
+			$content = positionExtraContent ($content, $mcontent);
+			}	
+		}
+	return (array($content, $pd));
+	}
+	
+function dA ($v)
+	{
+	global $start;
+	$a = explode(",", $v);
+	$m = intval($a[0]);
+	if(isset($a[1]))
+		{$d = intval($a[1]);}
+	else
+		{$d = 0;}
+	$date=new DateTime($start); // date object created.
+
+	$invert = 0;
+	if ($m < 0 or $d < 0)
+		{$invert = 1;
+		 $m = abs($m);
+		 $d = abs($d);}
+	$di = new DateInterval('P'.$m.'M'.$d.'D');
+	$di->invert = $invert;
+	$date->add($di); // inerval of 1 year 3 months added
+	$new = $date->format('Y-m-d'); // Output is 2020-Aug-30
+	return($new);
+	}
 
 ?>
