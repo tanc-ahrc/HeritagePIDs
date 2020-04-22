@@ -6,4 +6,4 @@ Persistent Identifiers (PIDs) provide a long-lasting click-able link to a digita
 
 This project will bring together best practices in the use of PIDs, building on existing work and projects. We will share expertise and provide recommendations on the approach to PIDs for colleagues in institutions across the UK heritage sector. Through a mixture of workshops, desk research and case studies, the project will answer questions such as 'What are the gaps in the existing PID landscape for heritage collections, buildings and environments?' and 'What should a PID infrastructure, strategy and governance framework look like for a unified national collection?'.
 
-This project is a Foundation project within the the [AHRC](https://ahrc.ukri.org/) funded [Towards a National Collection Programme](https://ahrc.ukri.org/funding/apply-for-funding/current-opportunities/towards-a-national-collection-opening-uk-heritage-to-the-world-pre-call-announcement/).
+This project is a Foundation project within the the [AHRC](https://ahrc.ukri.org/) funded [Towards a National Collection Programme](https://ahrc.ukri.org/research/fundedthemesandprogrammes/tanc-opening-uk-heritage-to-the-world/).
