@@ -1,21 +1,21 @@
 {"home": {
-  "title": \"Towards a National Collection - HeritagePIDs\",
-  "content": \"<div class=\\\"alert alert-info\\\" role=\\\"alert\\\"><p>How can we build a national collection if we do not know what is in it?<\/p><\\\/div><p>Museums, heritage collections and sites in the UK house at least 200 million physical and digital objects. Being able to identify these objects supports their discovery, use and curation - you cannot provide persistent or even consistent access to an item if you don't know what it is. Accession numbers are a key component in all collection and library management systems but these only cover selected objects within an individual collection. To fully realise the potential of our national collections, we need identifiers that can bring together collections across institutional boundaries.<\/p><p>Persistent Identifiers (PIDs) provide a long-lasting click-able link to a digital object. They are recognised by UKRI as a tool for enabling data discovery, access and citation. Supporting wider use of PIDs for collection objects, environments, specimens and related items will allow long-term, unambiguous linking of collections that will create a digital National Collection. However, the challenges, utility and wider benefits of PIDs are not as well understood across the heritage sector as they could be.<\/p><p>This project will bring together best practices in the use of PIDs, building on existing work and projects. We will share expertise and provide recommendations on the approach to PIDs for colleagues in institutions across the UK heritage sector. Through a mixture of workshops, desk research and case studies, the project will answer questions such as 'What are the gaps in the existing PID landscape for heritage collections, buildings and environments?' and 'What should a PID infrastructure, strategy and governance framework look like for a unified national collection?'.<\/p><p>This project is a Foundation project within the the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>\",
+  "title": "Towards a National Collection - HeritagePIDs\",
+  "content": "<div class=\\\"alert alert-info\\\" role=\\\"alert\\\"><p>How can we build a national collection if we do not know what is in it?<\/p><\\\/div><p>Museums, heritage collections and sites in the UK house at least 200 million physical and digital objects. Being able to identify these objects supports their discovery, use and curation - you cannot provide persistent or even consistent access to an item if you don't know what it is. Accession numbers are a key component in all collection and library management systems but these only cover selected objects within an individual collection. To fully realise the potential of our national collections, we need identifiers that can bring together collections across institutional boundaries.<\/p><p>Persistent Identifiers (PIDs) provide a long-lasting click-able link to a digital object. They are recognised by UKRI as a tool for enabling data discovery, access and citation. Supporting wider use of PIDs for collection objects, environments, specimens and related items will allow long-term, unambiguous linking of collections that will create a digital National Collection. However, the challenges, utility and wider benefits of PIDs are not as well understood across the heritage sector as they could be.<\/p><p>This project will bring together best practices in the use of PIDs, building on existing work and projects. We will share expertise and provide recommendations on the approach to PIDs for colleagues in institutions across the UK heritage sector. Through a mixture of workshops, desk research and case studies, the project will answer questions such as 'What are the gaps in the existing PID landscape for heritage collections, buildings and environments?' and 'What should a PID infrastructure, strategy and governance framework look like for a unified national collection?'.<\/p><p>This project is a Foundation project within the the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>\",
   "footnotes": [],
-  "content right\":""
+  "content right":""
   },
   
   "about": {
-    "class": "gallery\",
-    "file\": \"logos.json\",
-    "title\": \"HeritagePIDs - Contributors\",
-    "content\": \"<p>This project is a Foundation project within the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>\",
-    "footnotes\": [],
-    "content right\": \"\"}
+    "class": "gallery",
+    "file": "logos.json",
+    "title": "HeritagePIDs - Contributors",
+    "content": "<p>This project is a Foundation project within the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>\",
+    "footnotes": [],
+    "content right": ""}
 
-   "resources\": {
-    \"title\": \"Resources - HeritagePIDs\",
-    \"content\": \"<ul><li>Towards a National Collection: Persistent Identifiers as IRO Infrastructure Project Launch Webinar <a href=\"https:\/\/doi.org\/10.23636\/1174\/\">https:\/\/doi.org\/10.23636\/1174<\/a><\/li><li>HeritagePIDs Zotero Group <a href=\"https:\/\/www.zotero.org\/groups\/2470432\/heritagepids\/\">https:\/\/www.zotero.org\/groups\/2470432\/heritagepids<\/a><\/li>\r\n                <\/ul><p>This project is a Foundation project within the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>\",
-    \"footnotes\": [],
-    \"content right\": \"\"}
+   "resources": {
+    "title": \"Resources - HeritagePIDs\",
+    "content": \"<ul><li>Towards a National Collection: Persistent Identifiers as IRO Infrastructure Project Launch Webinar <a href=\"https:\/\/doi.org\/10.23636\/1174\/\">https:\/\/doi.org\/10.23636\/1174<\/a><\/li><li>HeritagePIDs Zotero Group <a href=\"https:\/\/www.zotero.org\/groups\/2470432\/heritagepids\/\">https:\/\/www.zotero.org\/groups\/2470432\/heritagepids<\/a><\/li>\r\n                <\/ul><p>This project is a Foundation project within the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>\",
+    "footnotes": [],
+    "content right": ""}
   }
