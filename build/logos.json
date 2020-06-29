@@ -1,1 +1,35 @@
-{\r\n \"ptitle\": \"Project Investigators\",\r\n \"stitle\": \"Project Partners\",\r\n \"images\": {\r\n \"The British Library\":\r\n   {\"logo\":\"graphics\/BritishLibrary.svg_.png\",\r\n    \"link\": \"https:\/\/www.bl.uk\/\",\r\n    \"level\": \"primary\"},\r\n  \"The Royal Botanical Gardens Edinburgh\":\r\n         {\"logo\":\"graphics\/rbge_logo.png\",\r\n     \t\t \"link\": \"https:\/\/www.rbge.org.uk\/\",\r\n     \t\t \"level\": \"primary\"},\r\n  \"The National Gallery\":\r\n    {\"logo\":\"graphics\/NG Logo Black on Transparent 600.png\",\r\n\t\t \"link\": \"https:\/\/www.nationalgallery.org.uk\",\r\n\t\t \"level\": \"primary\"},\r\n\t\"The University of Glasgow\":\r\n    {\"logo\":\"graphics\/glasgow.jpg\",\r\n\t\t \"link\": \"https:\/\/www.gla.ac.uk\/\",\r\n\t\t \"level\": \"primary\"},\r\n\t\"Science Museum Group\":\r\n    {\"logo\":\"graphics\/1200px-Smg-logo.svg.png\",\r\n\t\t \"link\": \"https:\/\/www.sciencemuseumgroup.org.uk\/\",\r\n\t\t \"level\": \"secondary\"},\r\n\t\"The Victoria and Albert Museum\":\r\n    {\"logo\":\"graphics\/512px-Victoria_and_Albert_Museum_Logo.svg.png\",\r\n\t\t \"link\": \"https:\/\/www.vam.ac.uk\/\",\r\n\t\t \"level\": \"secondary\"},\r\n  \"Natural History Museum\":\r\n       {\"logo\":\"graphics\/nhmlogo.jpg\",\r\n   \t\t \"link\": \"https:\/\/www.nhm.ac.uk\/\",\r\n   \t\t \"level\": \"secondary\"},\r\n}}
+{
+  "ptitle": "Project Investigators", 
+  "stitle": "Project Partners",
+  "images": {
+    "The British Library":   
+      {"logo":"graphics/BritishLibrary.svg_.png",    
+          "link": "https://www.bl.uk/",  
+          "level": "primary"},
+      "The Royal Botanical Gardens Edinburgh":
+        {"logo":"graphics/rbge_logo.png",     
+            "link": "https://www.rbge.org.uk/",
+            "level": "primary"},
+      "The National Gallery": 
+      {"logo":"graphics/NG Logo Black on Transparent 600.png",
+          "link": "https://www.nationalgallery.org.uk/",
+          "level": "primary"},
+    "The University of Glasgow":
+      {"logo":"graphics/glasgow.jpg",
+          "link": "https://www.gla.ac.uk/",
+          "level": "primary"},
+    "Science Museum Group":    
+     {"logo":"graphics/1200px-Smg-logo.svg.png",
+          "link": "https://www.sciencemuseumgroup.org.uk/",
+          "level": "secondary"},
+   "The Victoria and Albert Museum":    
+    {"logo":"graphics/512px-Victoria_and_Albert_Museum_Logo.svg.png",
+        "link": "https://www.vam.ac.uk/",
+        "level": "secondary"},
+  "Natural History Museum":
+    {"logo":"graphics/nhmlogo.jpg",
+        "link": "https://www.nhm.ac.uk/",
+        "level": "secondary"},
+}
+}
+
