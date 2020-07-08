@@ -29,7 +29,7 @@
   "Natural History Museum":
     {"logo":"graphics/nhmlogo.jpg",
         "link": "https://www.nhm.ac.uk/",
-        "level": "secondary"},
+        "level": "secondary"}
 }
 }
 
