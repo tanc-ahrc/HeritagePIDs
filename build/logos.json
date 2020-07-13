@@ -15,7 +15,7 @@
           "link": "https://www.nationalgallery.org.uk/",
           "level": "primary"},
     "The University of Glasgow":
-      {"logo":"graphics/glasgow.jpg",
+      {"logo":"graphics/uog.png",
           "link": "https://www.gla.ac.uk/",
           "level": "primary"},
     "Science Museum Group":    
@@ -27,7 +27,7 @@
         "link": "https://www.vam.ac.uk/",
         "level": "secondary"},
   "Natural History Museum":
-    {"logo":"graphics/nhmlogo.jpg",
+    {"logo":"graphics/nhmlogo2.png",
         "link": "https://www.nhm.ac.uk/",
         "level": "secondary"}
 }
