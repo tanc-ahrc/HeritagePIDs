@@ -18,7 +18,25 @@
   },
   "timeline": {
     "title": "Project Timeline - HeritagePIDs",
-    "content": "<p>This timeline is provisional due to the COVID-19 pandemic and may be changed throughout the project.</p><table><tbody><tr><td><p><strong>Date</strong></p></td><td><p><strong>Milestone Type</strong></p></td><td><p><strong>Detail</strong></p></td></tr><tr><td ><p><span>January 2020</span></p></td><td><p><span>Dissemination</span></p></td><td><p><span>PIDapalooza Lightning Talk</span></p></td></tr><tr><td><p><span>April 2020</span></p></td><td><p><span >Dissemination</span></p><br/><p><span>Deliverable</span></p></td><td><p><span >RDA PID IG Lightning Talk</span></p><br/><p><span>Webinar #1</span></p></td></tr><tr><td><p><span >May 2020</span></p></td><td><p>Deliverable</p></td><td><p><span>Survey #1 Launched</span></p></td></tr><tr><td><p><span >July 2020</span></p></td><td><p><span>Dissemination</span></p></td><td><p><span>Webinar #2 Interim survey results</span></p></td></tr><tr><td><p><span>August 2020</span></p></td><td><p><span >Dissemination</span></p></td><td><p><span >Case study #1 British Library&nbsp;</span></p></td></tr><tr><td><p><span >September 2020</span></p></td><td><p><span >Deliverable</span></p></td><td><p><span>Case study #2 National Gallery</span></p></td></tr><tr><td><p><span >October 2020</span></p></td><td><p><span>Dissemination</span></p><br><br><p><span>Deliverable</span></p></td><td><p><span>Webinar #3 Final survey and case studies #1+2</span></p><br><p><span>Interim report</span></p></td></tr><tr><td><p><span>January 2021</span></p></td><td><p><span>Deliverable</span></p><p><span>Deliverable</span></p></td><td><p><span>Demonstrator Tool in Beta</span></p><p>&nbsp;</p><p><span>Workshop (online)</span></p></td></tr><tr><td><p><span>March 2021</span></p></td><td><p><span>Deliverable</span></p></td><td><p><span>Case study #3 Natural History Museum</span></p></td></tr><tr><td><p><span>April 2021</span></p></td><td><p><span>Dissemination</span></p></td><td><p><span >Webinar based on case study #3</span></p></td></tr><tr><td><p><span>May 2021</span></p></td><td><p><span>Deliverable</span></p></td><td><p><span>Case study #4 Royal Botanic Gardens Edinburgh</span></p></td></tr><tr><td><p><span>June 2021</span></p></td><td><p><span >Deliverable</span></p><br/><p><span>Deliverable</span></p></td><td><p><span>Workshop #4 Edinburgh</span></p><br><p><span>Survey #2 Launch</span></p></td></tr><tr><td><p><span>August 2021</span></p></td><td><p><span>Deliverable</span></p></td><td><p><span>Video summarising best practices</span></p></td></tr></tbody></table><p>This project is a Foundation project within the <a href=\"https://ahrc.ukri.org/\">AHRC</a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world/\">Towards a National Collection Programme</a>.</p>",
-    "content right": ""
+    "content": "<p>This timeline is provisional due to the COVID-19 pandemic and may be changed throughout the project.</p>
+                <table border="1" cellpadding="3">
+                  <tbody>
+                   <tr><td><p><strong>Date</strong></p></td><td><p><strong>Milestone Type</strong></p></td><td><p><strong>Detail</strong></p></td></tr>
+                   <tr><td><p>January 2020</p></td><td><p>Dissemination</p></td><td><p>PIDapalooza - lightning talk</p></td></tr>
+                   <tr><td><p>April 2020</p></td><td><p>Dissemination</p><br><p>Deliverable</p></td><td><p>RDA PID IG Lightning Talk</p><br><p>Webinar #1</p></td></tr>
+                   <tr><td><p>May 2020</p></td><td><p>Deliverable</p></td><td><p>Survey #1 Launched</p></td></tr><tr><td><p>July 2020</p></td><td><p>Dissemination</p></td><td><p>Webinar #2 Based on Interim Survey Results</p></td></tr>
+                   <tr><td><p>August 2020</p></td><td><p>Dissemination</p></td><td><p>Case study #1 British Library</p></td></tr>
+                   <tr><td><p>September 2020</p></td><td><p>Deliverable</p></td><td><p>Case study #2 National Gallery</p></td></tr>
+                   <tr><td><p>October 2020</p></td><td><p>Dissemination</p><br><p>Deliverable</p></td><td><p>Webinar based on final survey and case studies #1 and 2</p><br><p>Interim report</p></td></tr>
+                   <tr><td><p>January 2021</p></td><td><p>Deliverable</p><br><p>Deliverable and Dissemination</p></td><td><p>Demonstrator tool: in beta</p><p>Workshop (online)</p></td></tr>
+                   <tr><td><p>March 2021</p></td><td><p>Deliverable</p></td><td><p>Case study #3 Natural History Museum</p></td></tr>
+                   <tr><td><p>April 2021</p></td><td><p>Dissemination</p></td><td><p>Webinar based on case study #3</p></td></tr>
+                   <tr><td><p>May 2021</p></td><td><p>Deliverable</p></td><td><p>Case study #4 Royal Botanic Gardens Edinburgh</p></td></tr>
+                   <tr><td><p>June 2021</p></td><td><p>Deliverable and Dissemination</p><br><p>Deliverable</p></td><td><p>Workshop #4 Edinburgh</p><br><p>Survey #2 Launched</p></td></tr>
+                   <tr><td><p>August 2021</p></td><td><p>Deliverable</p></td><td><p>Video summarising best practices</p></td></tr>
+                   <tr><td><p>September 2021</p></td><td><p>Dissemination</p><br><p>Deliverable</p></td><td><p>Final webinar inc. survey #2 results</p><br><p>Final report</p></td></tr>
+                   </tbody>
+                   </table>",
+  "content right": ""
   }
 }
