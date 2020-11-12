@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Persistent Identifier, HeritagePIDs, Focused Foundation project funded by the AHRC as part of the Towards a National Collection Programme." />
+		<meta name="keywords" content="AHRC, TANC, Towards and National Collection, PIDs, Persistent Identifiers, Research, Heritage, Culture, PHP, Javascript, Github Pages" />
+    <meta name="author" content="Joseph Padfield| joseph.padfield@ng-london.org.uk |National Gallery | London UK | website@ng-london.org.uk |www.nationalgallery.org.uk" />
+    <link rel="icon" href="https://www.ukri.org/ukri/includes/themes/ukri/images/favicon.ico">
+    <title>TANC HeritagePIDs</title>
+    
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+    
+    </style>
+  </head>
+
+  <body onload="onLoad();">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand"  href="./">
+  		<img id="page-logo" class="logo" title="Logo" src="graphics/TaNC-logo-rev-wh-RGB.png" 
+				style="" alt="The National Gallery"/>
+		  </a>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault"><ul class="navbar-nav">
+<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li><li class="nav-item "><a class="nav-link" href="about.html">About</a></li><li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item "><a class="nav-link" href="timeline.html">Timeline</a></li><!-- Dropdown Loop 1 --><li class="nav-item dropdown active"><a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle" title="Click to open the Blog menu" >Blog<span class="sr-only">(current)</span></a><ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow"><li><a href="blog.html" class="dropdown-item top-item" title="Click to open the Blog page">Blog</a></li><li class="dropdown-divider"></li><li><a href="lcd%20blog.html" class="dropdown-item">Lcd blog</a></li></ul></li><!-- End Loop 1 --></ul></div>
+			
+    <span class="navbar-text">
+      			<a href="https://github.com/tanc-ahrc/HeritagePIDs/">
+				<img id="ex-logo1" class="logo" title="github" src="graphics/github logo white.png" 
+				style="" alt="GitHub TANC Heritage PIDs"/>
+		  </a>
+    </span>
+    </nav>
+			<div class="row ">				
+			 <div class="col-12 col-md-12">          
+				
+				<div class="jumbotron"><h2>Linked Conservation Data and PIDs</h2></div><div class="row"><div class="col-12 col-lg-12">		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="blog.html">Blog</a></li>
+			</ol>
+		</nav></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><h2>Linked Conservation Data and PIDs</h2><p><i>Frances Madden <a href="http://orcid.org/0000-0002-5432-6116">(orcid.org/0000-0002-5432-6116)</a></i></p><p> Posted 12 November 2020</p><br><p><a href="https://www.ligatus.org.uk/lcd/">Linked Conservation Data</a> (LCD) is a project led by the University of the Arts London and the Stanford University Library amongst others. It aims to explore heritage conservation data, conservation documentation records, such as treatment reports, expressed as structured data and apply Linked Open Data techniques to it. The project is funded by the UK's Arts and Humanities Research Council and is now in its second phase.</p><p>Conservation systems and practices do not have a tradition of assigning identifiers to records or the objects with which they are concerned, and therefore the systems do not always use identifiers consistently either. In addition, conservation systems can often be separate and siloed from cataloguing and collection management systems, as is the case at the British Library, amongst other institutions, reducing the interoperability across systems. The LCD project wants to explore research questions which integrated conservation information can answer e.g. the use of particular techniques over time and the geographical use of particular techniques as well as the information conservation data can provide about a collection. From an identifier perspective the project’s work involves assigning identifiers both to conservation terms and the items which are being conserved.</p><p>During this phase of the project, they have produced draft <a href="https://www.ligatus.org.uk/lcd/output/193">vocabulary guidelines</a> to assist others in producing Linked Data for conservation records and terms used within them. In phase one of the project the need for identifiers as a key component of Linked Data was recognised. The project aims to explore and connect vocabulary terms held in different partners’ cataloguing systems, to be able to cross-link terms. LCD have decided to utilise <a href="https://www.w3.org/2004/02/skos/">SKOS</a> which is a long existing defined framework for publishing thesauri, vocabularies and taxonomies in a structured and machine readable format, therefore maximising interoperability. More generally, the idea of creating identifiers for vocabularies presents some specific requirements.</p><p>The project is exploring the extent to which terms can be matched and issues concerning granularity of terms. They have also adopted the best practice approaches of assigning Uniform Resource Identifiers (URIs) to the terms used and this requirement is included in the draft terminology guidelines. They are also exploring how best to leverage existing infrastructure such as existing thesauri of terms some of which already have URIs in use, e.g. the <a href="https://www.getty.edu/research/tools/vocabularies/aat/">Getty Art and Architecture Thesaurus</a> (AAT).</p><p>For vocabulary maintainers LCD suggests registering URIs using the <a href="https://w3id.org/">w3id.org</a> system. The <a href="https://www.ligatus.org.uk/lcd/output/142">workflow diagrams</a> produced by the project suggest either linking terms in an organisation’s system to an existing vocabulary which already uses URIs or assigning locally produced URIs to the terms created.</p><p>The National Gallery, a partner in both LCD and the PIDs as IRO Infrastructure projects, which has developed their own infrastructure as part of a pilot project to mint URIs, described in the project case study which is soon to be published, has offered to host URIs for the next phase of the project using a simple vocab server or <a href="https://www.researchspace.org/">ResearchSpace</a> instance. The issue of URIs being dereferenceable is apparent from the guidelines created by the project, for vocabulary terms. While it is best practice that URIs resolve to information about the term referenced, at the moment this is not an absolute requirement. Making it a requirement would mean that entering the Linked Data realm would require significant new infrastructure to host and serve data and the partners in Linked Conservation Data do not want to make it too difficult for organisations with limited resources to take this first step. In the meantime employing identifiers in current systems helps with adoption of good practices which can lead to making their conservation data available as Linked Open Data.</p><p>The benefit from these URIs from being universally and globally resolvable, i.e. being able to resolve to the record without knowing which institution created the record, is not clear at this stage in the project, nor is it being actively explored at this stage for the reasons described above. As an example of a globally resolvable identifier, ‘https://data.ng-london.org.uk/0F6J-0001-0000-0000’ could be expressed instead as a DOI such as ‘https://doi.org/10.12345/0F6J-0001-0000-0000’, removing the requirement for any knowledge by the user of the ‘data.ng-london.org.uk’ namespace. This capability may benefit some of the widely used vocabularies such as the AAT and encourage the adoption of a single or one system, becoming a de facto terminology hub, but issues of granularity and mapping terms from internal systems would still need to be addressed. As most of the organisations involved in the project are memory institutions themselves, they may already have the infrastructure in place to provide long lasting identifiers, however the lack of centralised governance associated with locally managed identifiers presents a risk to the long term accessibility of the URIs in this aspect and the interest and willingness of these organisations to commit to hosting these identifiers is also untested.</p><p>The different entity types assigned URIs may also present different issues when it comes to their long term maintenance. While vocabulary terms may be used by multiple organisations and would clearly warrant long term community driven sustainability efforts to maintain the URIs for the terms and keep them updated, the same may not be the case for the URIs for collection items undergoing conservation as they may only be linked and used by its holding organisation.</p><p>For the partners involved in the project, some, but not all, are already able to create internal identifiers within their own systems. While the internal system identifiers may provide some degree of solution across internal systems e.g. between cataloguing and conservation, they are not necessarily persistent and they may not be ideal for Linked Data even if they are formed as URIs. It seems sensible for any organisation who is implementing a new system or upgrading an existing system to consider exposing this data in an open format as part of the implementation. The LCD project is investigating hosting the infrastructure on a jointly held repository or portal within the project partners which will be machine readable and query-able via a SPARQL endpoint and API with web-browsing capability for human readable access. This portal, an instance of ResearchSpace, will provide a useful prototype demonstrating the potential of the approaches but a model for its long term sustainability is yet to be decided.</p><p>While sustainability is a challenge for any type of identifier, identifiers for heritage objects address several different use cases, including reference and citation as well as conservation, and it is anticipated conservation data would only be one of those, strengthening the case for identifiers being assigned to collection items. The survey conducted by the PIDs as IRO Infrastructure Project (described <a href="https://doi.org/10.23636/1214">here</a>) found that many of the organisations who were using PIDs were using URIs as a result of applying Linked Open Data approaches to their collection items (<a href="https://doi.org/10.23636/1210">summary data</a>). The use case for conservation data presents another dimension to these efforts and could result in identifiers being embedded in aspects of collections which they otherwise would not.</p><div class="foonote"><ul></ul></div></div><!--/span--></div><!--/row-->    <br/>
+			</div><!--/span-->
+			
+			
+			</div><!--/row-->
+			
+			  <footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5" style="text-align:left;"><a href="https://ahrc.ukri.org/research/fundedthemesandprogrammes/tanc-opening-uk-heritage-to-the-world//"><img alt="AHRC TANC" style="border-width:0;height:31px;" src="graphics/TANC_03.png"></a></div>
+				<div class="col-2" style="text-align:center;"></div>
+				<div class="col-5" style="text-align:right;"><a href='http://rightsstatements.org/vocab/InC-EDU/1.0/'><img height='16' alt='In Copyright - Educational Use Permitted' title='In Copyright - Educational Use Permitted' src='graphics/InC-EDU.dark-white-interior-blue-type.png'/></a><a rel='license' href='https://creativecommons.org/licenses/by-nc/4.0/'><img alt='Creative Commons Licence' style='border-width:0' src='https://i.creativecommons.org/l/by-nc/4.0/88x31.png' /></a></div>
+			</div>
+		</div>        
+  </footer>
+    </div><!--/.container-->
+    
+    
+	<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://unpkg.com/tether@1.4.7/dist/js/tether.min.js"></script>
+	<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+			
+			function onLoad() {
+				$(function() {
+  // ------------------------------------------------------- //
+  // Multi Level dropdowns
+  // ------------------------------------------------------ //
+  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    $(this).siblings().toggleClass("show");
+
+
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+  });
+});
+				}
+    </script>
+  </body>
+</html>
