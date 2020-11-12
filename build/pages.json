@@ -23,7 +23,7 @@
 },
  "blog": {
     "title": "Blog",
-    "content": "<p>The HeritagePIDs blog contains case studies describing use cases for persistent identifiers (PIDs) and requirements different institutions have for them.</p>",
+    "content": "<p>The HeritagePIDs blog contains case studies describing use cases for persistent identifiers (PIDs) and requirements different institutions have for them.<\/p>",
     "content right": ""
  },
   "lcd blog"
