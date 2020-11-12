@@ -23,7 +23,7 @@
 },
  "Blog": {
     "title": "HeritagePIDs Blog",
-    "content": "<p>The HeritagePIDs blog contains case studies describing use cases for persistent identifiers (PIDs) and requirements different institutions have for them.<\/p>",
+     "content": "<p>The HeritagePIDs blog contains case studies describing use cases for persistent identifiers (PIDs) and requirements different institutions have for them.<\/p><br><ul><a href=\"https://tanc-ahrc.github.io/HeritagePIDs/LCD%20Blog.html\">Linked Conservation Data and PIDs</a></ul>",
      "content right": ""
  },
   "LCD Blog": {
