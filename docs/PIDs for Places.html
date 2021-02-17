@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Persistent Identifier, HeritagePIDs, Focused Foundation project funded by the AHRC as part of the Towards a National Collection Programme." />
+		<meta name="keywords" content="AHRC, TANC, Towards and National Collection, PIDs, Persistent Identifiers, Research, Heritage, Culture, PHP, Javascript, Github Pages" />
+    <meta name="author" content="Joseph Padfield| joseph.padfield@ng-london.org.uk |National Gallery | London UK | website@ng-london.org.uk |www.nationalgallery.org.uk" />
+    <link rel="icon" href="https://www.ukri.org/ukri/includes/themes/ukri/images/favicon.ico">
+    <title>TANC HeritagePIDs</title>
+    
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+    
+    </style>
+  </head>
+
+  <body onload="onLoad();">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand"  href="./">
+  		<img id="page-logo" class="logo" title="Logo" src="graphics/TaNC-logo-rev-wh-RGB.png" 
+				style="" alt="The National Gallery"/>
+		  </a>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault"><ul class="navbar-nav">
+<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li><li class="nav-item "><a class="nav-link" href="about.html">About</a></li><li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item "><a class="nav-link" href="timeline.html">Timeline</a></li><!-- Dropdown Loop 1 --><li class="nav-item dropdown active"><a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle" title="Click to open the Blog menu" >Blog<span class="sr-only">(current)</span></a><ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow"><li><a href="Blog.html" class="dropdown-item top-item" title="Click to open the Blog page">Blog</a></li><li class="dropdown-divider"></li><li><a href="LCD%20Blog.html" class="dropdown-item">LCD Blog</a></li><li><a href="V&A%20Case%20Study.html" class="dropdown-item">V&A Case Study</a></li><li><a href="PIDs%20for%20Places.html" class="dropdown-item">PIDs for Places</a></li></ul></li><!-- End Loop 1 --></ul></div>
+			
+    <span class="navbar-text">
+      			<a href="https://github.com/tanc-ahrc/HeritagePIDs/">
+				<img id="ex-logo1" class="logo" title="github" src="graphics/github logo white.png" 
+				style="" alt="GitHub TANC Heritage PIDs"/>
+		  </a>
+    </span>
+    </nav>
+			<div class="row ">				
+			 <div class="col-12 col-md-12">          
+				
+				<div class="jumbotron"><h2>PIDs for Places</h2></div><div class="row"><div class="col-12 col-lg-12">		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="Blog.html">Blog</a></li>
+			</ol>
+		</nav></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p><i>Frances Madden <a href=\"http://orcid.org/0000-0002-5432-6116\">(orcid.org/0000-0002-5432-6116)</a></i></p><p>Posted 17 February 2021</p><br><p>Many of the case studies we have looked at so far in the Heritage PIDs project have focused on persistent identifiers (PIDs) for collection items and people associated with those items. However people are not the only entities that can be associated with items and which have authority files in museum, library and archive management systems, places are often added to management systems as authority files. In addition many systems contain large amounts of other location data e.g. location collected, place of publication etc. There has been interest expressed in PIDs for places and locations over the past several years. It was noted by the FREYA project’s <a href=\"https://doi.org/10.5281/zenodo.3554255\">landscape survey</a> in 2018 and several tools have been developed for capturing PIDs for places, one of which is discussed here.</p><p><a href=\"https://tanc-ahrc.github.io/LocatingTANC\">Locating a National Collection</a> is another foundation project in the Towards a National Collection programme, which is investigating the role of location in relation to building a national collection. It aims to help organisations use location data to connect their collections and engage audiences in new ways. Within the project's objectives, they include 'understand how location is referenced and represented in IRO collections', 'scope and describe the technical components necessary to connect collections using location, the available options and make recommendations for potential paths to progress', and 'to develop and evaluate a prototype access interface to enhance our understanding of user requirements and potential case studies'. It is hoped that strengthening the connections between resources in GLAM institutions and places will help the resources resonate more with general audiences and the project is exploring the idea that concepts such as ‘place identity’, ‘locality’ and ‘proximity’ might be engagement drivers for users browsing collections.</p><figure class=\"figure\"><img src=\"graphics/BL Kings Topographical collection.jpg\" class=\"figure-img img-fluid rounded\" alt=\"Image of a map from the King's Topographical Collection at the British Library\"><figcaption class=\"figure-caption\"><a href=\"https://www.flickr.com/photos/britishlibrary/50266131877/in/album-72157716220271206\">The BL King’s Topographical Collection:</a>'Hemisphaerium Coeli Australe (Boreale)'</figcaption></figure><p>The importance of location for a national collection is as a point of commonality across collections held by different organisations. If users are able to search across different collections simultaneously and find items related to a particular location, they can be used by both research users and the general public. At present conducting searches across different collections requires time, dedication and considerable skill on the user’s behalf. Organisations hold location data in their collection metadata but this is not in any standardised form across the sector.</p><p>For GLAM organisations, one of the main reasons PIDs are useful when dealing with location data is they help disambiguate between places which have the same name (e.g. <a href=\"https://www.wikidata.org/wiki/Q1524\">Athens, Greece</a> vs. <a href=\"https://www.wikidata.org/wiki/Q203263\">Athens, Georgia</a>) and can help with identifying the same place described using a different name either in different languages (<a href=\"https://www.wikidata.org/wiki/Q10690\">Caerdydd and Cardiff</a>) or because a place has changed name over time (<a href=\"https://www.wikidata.org/wiki/Q745989\">Kingstown and Dún Laoghaire</a>). Identifiers can be used to connect these concepts together so they can be understood to be the same, preventing data silos. Often cataloguing guidelines will have addressed these issues at the level of an individual system where standardised terms are used but these can change over time and many organisations will have more than one cataloguing system, e.g. one for library collections and one for archives, and these may not have the same standards. Once you start combining data from across heterogeneous systems and different organisations the problems increase in scale.</p><p><i>Note: The links in the examples connect to Wikidata examples to demonstrate how these variations can be understood, other identification methods such as gazetteers are described elsewhere in this post.</i></p><figure class=\"figure\"><img src=\"graphics/Toronto past and present.jpg\" class=\"figure-img img-fluid rounded\" alt=\"Image of the Imperial Bank Buildings Wellington Street East in Toronto\"><figcaption class=\"figure-caption\"><a href=\"https://www.flickr.com/photos/britishlibrary/11170799453/in/album-72157648496372185\">British Library digitised image</a> from page 370 of 'Toronto: past and present: historical and descriptive. A memorial volume for the semi-centennial of 1884, etc'</figcaption></figure><p>Applications using location PIDs could include adding coordinates to create maps and other visualisations, understanding the movement of collection items and illustrating all collection items related to a particular place, increasing users’ understanding. One of the most successful examples of a research community within cultural heritage using identifiers, any identifiers - not just those related to location, is the <a href=\"https://pelagios.org\">Pelagios</a> network. The network allows researchers and curators to work together to link and explore the history of places. To do this, they use online gazetteers which are a type of geographical dictionary, some of which have been made available in a linked open data format and therefore have uniform resource identifiers (URIs), or a sort of PID.</p><p>The Pelagios network created a tool called <a href=\"https://recogito.pelagios.org\">Recogito</a> which allows you to tag place references contained in texts or images with gazetteer URIs, such as from <a href=\"https://pleiades.stoa.org\">Pleiades</a>, and visualise them on a map. These URIs are connected in a standard way which can be exported in formats such as <a href=\"https://en.wikipedia.org/wiki/Comma-separated_values\">csv</a> and <a href=\"https://www.w3.org/RDF\">RDF</a> to be queried and analysed by researchers. This has been used in many research projects to investigate documents of interest (either textual corpora, archaeological collections or others) in a spatial perspective, gaining a new understanding of them and highlighting new perspectives but also disciplines such as cartography, see the <a href=\"https://medium.com/pelagios\">Pelagios blog</a> for examples. The Locating a National Collection project is building on this work and exploring the applicability of tools such as Recogito in augmenting collections with identifiers. The URIs used in a gazetteer like Pleiades can be resolved in both human and machine readable formats. While it is not necessary for them to be resolvable (a user can click on them and is directed to a webpage with metadata about the location) to link, it does make it easier for an end user to engage with them.</p><figure class=\"figure\"><img src=\"graphics/Battles of the 19th century.jpg\" class=\"figure-img img-fluid rounded\" alt=\"Digitised image from a book illustrating the locations of battles in the 19th century"\"><figcaption class=\"figure-caption\"><a href=\"https://www.flickr.com/photos/britishlibrary/11133516016/in/album-72157638735426654\">British Library digitised image</a> from page 586 of 'Illustrated Battles of the Nineteenth Century, by Archibald Forbes, Major Arthur Griffiths, and others.'</figcaption></figure><p>There are several gazetteers available in linked open data format in addition to Pleiades and gazetteers have gained particular traction for scholars of the Classical world but their coverage is not uniform across time periods, e.g. there are very few for the Medieval period. Wikidata can also be used for this purpose, while not a gazetteer, it contains large amounts of location data in a standardised linked format.</p><p>However concepts of location can have the following issues which need to be addressed when assigning PIDs:</p><ul>Concepts of location can change over time. Collections can relate to items created at any point over thousands of years. Names of places change but also the boundaries which define a place can evolve. For example Wikidata provides an ID for Athens, the capital city of Greece but also for Classical Athens, the city-state in ancient Greece. These two concepts are related in Wikidata’s model but are not considered the same. Another example of evolving concepts of places would be how the boundaries of local government areas can change over time.</ul><ul>Concepts of place can be ambiguous and it is not possible to determine to which place a text refers.</ul><ul>The systems holding location data are diverse and they can manage location terms in different ways, e.g. some fields may be linked to authority records but some are not.</ul><ul>Metadata is not standardised across organisations and concepts can be represented in various ways, using different terminologies and in diversely named fields. This makes it difficult to extract the information automatically.</ul><ul>There can be many possible locations associated with a collection item, it can be difficult to determine if all of these should be connected to an item. At what point does it become too much for a human user to understand.</ul><ul>There can also be a lot of location data missing from collection metadata due to minimal cataloguing practices.</ul><ul>There can also be a lot of location data missing from collection metadata due to minimal cataloguing practices.</ul><p>So what do cultural heritage organisations need to think about to start using location PIDs? For one thing, organisations should think about augmenting their existing collection information with external identifiers. Several of the case studies the Heritage PIDs project has looked at so far focused on the creation of PIDs for items in organisations’ collections. However, there are benefits to linking to collection items and other external entities from your own system. Another foundation project, <a href=\"https://www.sciencemuseumgroup.org.uk/project/heritage-connector\">Heritage Connector</a>, is developing a tool to use Wikidata identifiers to do just that.</p><p>Scale is always an issue when dealing with large existing collections. How do you find all the related identifiers and add them into the collection management system? This issue has not been fully resolved but the <a href=\"https://livingwithmachines.ac.uk\">Living with Machines</a> project has developed tools to help with automated matching of terms which could be applied here. Some collection management systems can also struggle to support identifiers presented as resolvable links within them. For ongoing collecting, cataloguing staff would need to be trained on the appropriate use of these identifiers and best practice is still emerging on their use in cataloguing.</p><p>PIDs for location data probably provide one of the best success stories in terms of identifiers being used to facilitate innovative research, however there is no scheme as yet which can be adopted universally and in turn collection management systems lack the functionality to support location identifiers. Despite this, any organisation which is considering implementing persistent identifiers within their systems should definitely look at including their location data within the scope of that implementation and exploring ways to increase the interoperability of their collection data.</p><div class="foonote"><ul></ul></div></div><!--/span--></div><!--/row-->    <br/>
+			</div><!--/span-->
+			
+			
+			</div><!--/row-->
+			
+			  <footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5" style="text-align:left;"><a href="https://ahrc.ukri.org/research/fundedthemesandprogrammes/tanc-opening-uk-heritage-to-the-world//"><img alt="AHRC TANC" style="border-width:0;height:31px;" src="graphics/TANC_03.png"></a></div>
+				<div class="col-2" style="text-align:center;"></div>
+				<div class="col-5" style="text-align:right;"><a href='http://rightsstatements.org/vocab/InC-EDU/1.0/'><img height='16' alt='In Copyright - Educational Use Permitted' title='In Copyright - Educational Use Permitted' src='graphics/InC-EDU.dark-white-interior-blue-type.png'/></a><a rel='license' href='https://creativecommons.org/licenses/by-nc/4.0/'><img alt='Creative Commons Licence' style='border-width:0' src='https://i.creativecommons.org/l/by-nc/4.0/88x31.png' /></a></div>
+			</div>
+		</div>        
+  </footer>
+    </div><!--/.container-->
+    
+    
+	<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://unpkg.com/tether@1.4.7/dist/js/tether.min.js"></script>
+	<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+			
+			function onLoad() {
+				$(function() {
+  // ------------------------------------------------------- //
+  // Multi Level dropdowns
+  // ------------------------------------------------------ //
+  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    $(this).siblings().toggleClass("show");
+
+
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+  });
+});
+				}
+    </script>
+  </body>
+</html>
