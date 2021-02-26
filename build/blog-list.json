@@ -2,14 +2,21 @@
   "defaultcard": "list",
   "displaychecked": false,
   "tableofcontents": false,
+  "groups": {
+  	"Blog posts" : {
+    		"comment": "The HeritagePIDs blog contains case studies describing use cases for persistent identifiers (PIDs) and requirements different organisations have for them. Content on the blog is updated regularly.",
+    		"card": "list"}
+  	},
   "list": [{
-	"ptitle": "Linked Conservation Data and PIDs",
+  "groups": ["Blog posts"],
+  "ptitle": "Linked Conservation Data and PIDs",
 	"stitle": "",
 	"comment": "",
 	"image": "",
 	"checked": "",
 	"link": "https://tanc-ahrc.github.io/HeritagePIDs/LCD%20Blog.html"
 },{
+  "groups": ["Blog posts"],
 	"ptitle": "Identifiers at the V&A - A Case Study",
 	"stitle": "",
 	"comment": "",
@@ -17,6 +24,7 @@
 	"checked": "",
 	"link": "https://tanc-ahrc.github.io/HeritagePIDs/V&A%20Case%20Study.html"
 },{
+  "groups": ["Blog posts"],
 	"ptitle": "PIDs for Places",
 	"stitle": "",
 	"comment": "",
@@ -24,6 +32,7 @@
 	"checked": "",
 	"link": "https://tanc-ahrc.github.io/HeritagePIDs/PIDs%20for%20Places.html"
 },{
+  "groups": ["Blog posts"],
 	"ptitle": "Aggregating archive data with and without PIDs",
 	"stitle": "",
 	"comment": "",
