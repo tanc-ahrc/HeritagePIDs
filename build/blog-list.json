@@ -1,0 +1,35 @@
+{
+  "defaultcard": "list",
+  "displaychecked": false,
+  "tableofcontents": false,
+  "list": [{
+	"ptitle": Linked Conservation Data and PIDs",
+	"stitle": "",
+	"comment": "",
+	"image": "",
+	"checked": "",
+	"link": "https://tanc-ahrc.github.io/HeritagePIDs/LCD%20Blog.html"
+},{
+	"ptitle": "Identifiers at the V&A - A Case Study",
+	"stitle": "",
+	"comment": "",
+	"image": "",
+	"checked": "",
+	"link": "https://tanc-ahrc.github.io/HeritagePIDs/V&A%20Case%20Study.html"
+},{
+	"ptitle": "PIDs for Places",
+	"stitle": "",
+	"comment": "",
+	"image": "",
+	"checked": "",
+	"link": "https://tanc-ahrc.github.io/HeritagePIDs/PIDs%20for%20Places.html"
+},{
+	"ptitle": "Aggregating archive data with and without PIDs",
+	"stitle": "",
+	"comment": "",
+	"image": "",
+	"checked": "",
+	"link": "https://tanc-ahrc.github.io/HeritagePIDs/Archives%20Hub.html"
+}]
+	
+}
