@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Persistent Identifier, HeritagePIDs, Focused Foundation project funded by the AHRC as part of the Towards a National Collection Programme." />
+		<meta name="keywords" content="AHRC, TANC, Towards and National Collection, PIDs, Persistent Identifiers, Research, Heritage, Culture, PHP, Javascript, Github Pages" />
+    <meta name="author" content="Joseph Padfield| joseph.padfield@ng-london.org.uk |National Gallery | London UK | website@ng-london.org.uk |www.nationalgallery.org.uk" />
+    <link rel="icon" href="https://www.ukri.org/ukri/includes/themes/ukri/images/favicon.ico">
+    <title>TANC HeritagePIDs</title>
+    
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+    
+    </style>
+  </head>
+
+  <body onload="onLoad();">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand"  href="./">
+  		<img id="page-logo" class="logo" title="Logo" src="graphics/TaNC-logo-rev-wh-RGB.png" 
+				style="" alt="The National Gallery"/>
+		  </a>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault"><ul class="navbar-nav">
+<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li><li class="nav-item "><a class="nav-link" href="about.html">About</a></li><li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item "><a class="nav-link" href="timeline.html">Timeline</a></li><!-- Dropdown Loop 1 --><li class="nav-item dropdown active"><a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle" title="Click to open the Blog menu" >Blog<span class="sr-only">(current)</span></a><ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow"><li><a href="Blog.html" class="dropdown-item top-item" title="Click to open the Blog page">Blog</a></li><li class="dropdown-divider"></li><li><a href="LCD%20Blog.html" class="dropdown-item">LCD Blog</a></li><li><a href="V&A%20Case%20Study.html" class="dropdown-item">V&A Case Study</a></li><li><a href="PIDs%20for%20Places.html" class="dropdown-item">PIDs for Places</a></li><li><a href="Archives%20Hub.html" class="dropdown-item">Archives Hub</a></li></ul></li><!-- End Loop 1 --></ul></div>
+			
+    <span class="navbar-text">
+      			<a href="https://github.com/tanc-ahrc/HeritagePIDs/">
+				<img id="ex-logo1" class="logo" title="github" src="graphics/github logo white.png" 
+				style="" alt="GitHub TANC Heritage PIDs"/>
+		  </a>
+    </span>
+    </nav>
+			<div class="row ">				
+			 <div class="col-12 col-md-12">          
+				
+				<div class="jumbotron"><h2>Aggregating archive data with and without PIDs</h2></div><div class="row"><div class="col-12 col-lg-12">		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="Blog.html">Blog</a></li>
+			</ol>
+		</nav></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p><i>Frances Madden <a href='https://orcid.org/0000-0002-5432-6116'>(orcid.org/0000-0002-5432-6116)</a></i></p><p>Posted 26 February 2021</p><p>So far we have used these blog posts to cover different types of collection information which might benefit from persistent identifiers as well as how the various institutions involved with the project which have not yet implemented persistent identifiers might benefit from them. On this occasion we turn to one of the aggregators of UK GLAM collections, the <a href='https://archiveshub.jisc.ac.uk/'>Archives Hub</a>, to find out how they use identifiers and how they might assist them in the future.</p><h4>Aggregation and a ‘national collection’</h4><p>As the <a href='https://www.nationalcollection.org.uk/'>Towards a National Collection</a> programme is working towards developing a "unified virtual 'national collection'", therefore an aggregator has the unique perspective on the barriers which exist between collections and the issues encountered when trying to join them together. Persistent unique identifiers can play a crucial role in combining collections in a sustainable way so we wanted to get the view of the Archives Hub on this work.</p><h4>About the Archives Hub</h4><p>According to its <a href='https://archiveshub.jisc.ac.uk/introduction/'>website</a>, 'the Archives Hub brings together descriptions of thousands of the UK's archive collections. Representing over 330 institutions across the country, the Archives Hub is an effective way to discover unique and often little-known sources…often representing collections being made available for the first time.' The Archives Hub system is based on <a href='https://www.k-int.com/products/ciim/'>CIIM</a>, a product supplied by Knowledge Integration, which is also being implemented by the National Gallery to support the integration of their collections across different systems.</p><p>Archives across the UK contribute to the Archives Hub either via filling in the Archives Hub own EAD (Encoded Archival Description) <a href='https://archiveshub.jisc.ac.uk/eadeditor/'>Editor form</a>, through exporting from an existing archive management system or harvesting via an OAI-PMH endpoint. The Hub maintains a variety of methods to support the wide range of archives with which it works, including some very small and under resourced repositories. The staff at the Archives Hub have a large amount of expertise in rationalising and working with data from a wide array of systems and making it interoperable with their own system. As a result of this they accept data in a range of formats so long as it is compatible with EAD.</p><h4>Names project</h4><p>Recently the team began working on a project with <a href='https://www.k-int.com/'>Knowledge Integration</a> around names within the Archives Hub. As the Archives Hub was officially launched in 2001 and it doesn't have any standardised use of names in the data it holds but would like to rationalise them to aid resource discovery. EAD/ISAD(G) does not harmonise the fields with index terms, which are generally the links to authority files within a collection. This means that often Creator names will appear in an array of formats, which are different from the index term which will be created in a standard format and include useful information such as date and perhaps epithet.</p><p>For example this <a href='https://archiveshub.jisc.ac.uk/data/gb12-ms.add.9267'>record</a> contains a Creator written in the format first name, surname. At the bottom of the page, it contains index terms which format the same name as surname, first name, dates, epithet. Within one record it is obvious that these two names are the same, but trying to apply automatic matching protocols across hundreds of thousands of names from hundreds of collections, it is not so clear. As Creator is a free text field, sometimes during harvesting the format is not standardised meaning it can include terms such as ‘various’ or additional text such as ‘Created by’ or ‘Possibly’ is included before a proper name.</p><figure class="figure"><img src="graphics/RobertHill-1.png" class="figure=img img-fluid rounded" alt="Screenshot of Robert Hill: Correspondence and Papers from the Archives Hub"></figure><figure class="figure"><img src="graphics/RobertHill-2.png" class="figure=img img-fluid rounded" alt="Screenshot of Robert Hill: Correspondence and Papers from the Archives Hub"></figure><p>Jane Stevenson from the Archives Hub has <a href='https://blog.archiveshub.jisc.ac.uk/category/names-project/'>blogged</a> extensively about the project and describes many of the issues encountered when trying to algorithmically de-duplicate hundreds of thousands of names. Through a lot of hard work, they have developed a process to standardise name formats across the metadata they hold. Once that has been done they can begin the process of deduplication. It was noted that once identifiers are in use, format matters less because you can connect different entities together with a 'same as' relationship, regardless of how the name string itself is formatted. This is true not only for names but for any type of entity, such as location, subject or organisation etc. Once the identifier is a constant connection it can be used in multiple systems. The Archives Hub's own cataloguing tool encourages <a href='http://viaf.org/'>VIAF</a> IDs to be added to names by providing a lookup to VIAF. Any names with the VIAF ID will be uniquely identifiable, however they are structured.</p><p>The names project has also highlighted another issue mentioned in the previous blog post about persistent identifiers for location data - how to deal with uncertainty. For many of the names held within the Archives Hub, this may be the only mention of them. Traditional authority files are maintained by a single institution and can often lack detail due to the limited sources and resources available within the archive. Key information may be lacking from known individuals and this results in a large number of records from different organisations with sparse metadata, meaning it is difficult to make definitive matches across collections. However by making that information available, one invites these connections to be made by others.</p><h4>Links to digital content</h4><p>The Archives Hub provides links to digital content held within contributing archives as well as supporting collection information. </p><figure class="figure"><img src="graphics/SalfordStreet.png" class="figure=img img-fluid rounded" alt="Screenshot of a record linking to digital content on the Archives Hub"></figure><p>This can be done in a couple of ways, the first is where the contributing organisation provide a link which is displayed on the Archives Hub, as in the <a href='https://archiveshub.jisc.ac.uk/data/gb427-usp/usp/3/110a'>screenshot</a> above. These links would ideally be persistent, but in many cases they break. Links to collection items frequently break and the Archives Hub has recently agreed a link check service with their system supplier to ensure the continued access of collections. This is a clear demonstration of how persistent identifiers help in building robust long-lasting connections to collection information.</p><p>The Archives Hub can also display images by importing them using the URL and storing them locally, as in the <a href='https://archiveshub.jisc.ac.uk/data/gb1837-des/dca/des/dca/14b/27/12.4'>screenshot</a> below and there have been discussions about making that a more permanent feature of the service, offering a repository type function to Archives. This method does ensures the image remains available, but ironically the image may then be removed from the URL but still be viewable on the Archives Hub.</p><figure class="figure"><img src="graphics/4waysoflivingcover.png" class="figure=img img-fluid rounded" alt="Screenshot of record with a digital image from the Archives Hub"></figure><h4>Identifiers for discovery</h4><p>Records in the Archives Hub are assigned opaque URIs which can be viewed in the browser bar of a record. The Archives Hub also creates 'bookmark' links to aid citation of collections. This follows a standard format of ‘https://archiveshub.jisc.ac.uk/data/CountryCodeRepositoryCode-Reference’, such as ‘https://archiveshub.jisc.ac.uk/data/gb12-ms.add.9267’. These contain semantic information and are human readable to an extent. The country code is always 'GB’ or IM for the UK or Isle of Man. The repository code will correspond to the <a href='https://discovery.nationalarchives.gov.uk/find-an-archive'>ARCHON code</a> assigned by the National Archives for that particular repository. The reference will be the same as that used by the archive. These are regarded as user friendly for archivists and researchers as the semantic information within them can be understood by those familiar with the collections, however this relies on the reference being persistent, and that is not always the case. Changes are not frequent but do occur, mostly due to items being moved within the hierarchical structure of archive collections, therefore changing their reference number.</p><p>For example, if the photograph listed above was moved from box 3 to box 2 the reference would change from GB 427 USP/3/110a to GB 427 USP/2/XXX, where XXX is the number of the item in the box. This is unlikely to happen in collections which have already been catalogued to item level but it could occur, for example, where boxes or files were rearranged to suit a particular theme.</p><p>Repository codes can also sometimes change for collections where collections are merged. For example, Manchester University Archive (GB 133) holds both the University Archive and the Methodist Archive (GB 135) which had two different repository codes but these were combined under the Manchester University (GB 133) code which meant that those links needed to be changed.</p><p>Thus far the Archives Hub has changed the bookmark links to match with the most recent version meaning older links would break. Redirects could be put in place to make sure the link continues to remain resolvable but where items have been reclassified within the hierarchy, a reference could be reused for a different record. These links do not have any governance that they will be persistent but best efforts are made to do so where possible. The longevity of the Hub means that they have encountered issues which occur over time and which may not have yet been encountered by more recent implementations. As the Archives Hub is an aggregator of metadata, they cannot create persistent links themselves as they do not have the capability of ensuring the accuracy and quality of the metadata they hold.</p><h4>Low barrier to entry</h4><p>The Archives Hub’s broad experience aggregating data from diverse collections provides some useful insights into any type of persistent identifier implementation or recommendations which could feed into the Towards a National Collection programme. They have prioritised keeping the user base as broad as possible and making sure anything they develop works for all of the contributing archives. This can mean that progress is slow and solutions may not have as many features as what larger, better-resourced organisations could accommodate, however, it does mean that a huge array of collections are more discoverable and accessible.</p><p>For the Heritage PIDs project, it is a salient reminder to think about the requirements we are developing for the sector and making our project’s recommendations and guidance as inclusive as possible. This does not mean that institutions should not try to make their collections as persistently, globally identifiable and resolvable as possible, but it does mean that any tools developed in support of a national collection should be lightweight and implemented by collections easily within minimal financial and human resources.</p><div class="foonote"><ul></ul></div></div><!--/span--></div><!--/row-->    <br/>
+			</div><!--/span-->
+			
+			
+			</div><!--/row-->
+			
+			  <footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5" style="text-align:left;"><a href="https://ahrc.ukri.org/research/fundedthemesandprogrammes/tanc-opening-uk-heritage-to-the-world//"><img alt="AHRC TANC" style="border-width:0;height:31px;" src="graphics/TANC_03.png"></a></div>
+				<div class="col-2" style="text-align:center;"></div>
+				<div class="col-5" style="text-align:right;"><a href='http://rightsstatements.org/vocab/InC-EDU/1.0/'><img height='16' alt='In Copyright - Educational Use Permitted' title='In Copyright - Educational Use Permitted' src='graphics/InC-EDU.dark-white-interior-blue-type.png'/></a><a rel='license' href='https://creativecommons.org/licenses/by-nc/4.0/'><img alt='Creative Commons Licence' style='border-width:0' src='https://i.creativecommons.org/l/by-nc/4.0/88x31.png' /></a></div>
+			</div>
+		</div>        
+  </footer>
+    </div><!--/.container-->
+    
+    
+	<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://unpkg.com/tether@1.4.7/dist/js/tether.min.js"></script>
+	<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+			
+			function onLoad() {
+				$(function() {
+  // ------------------------------------------------------- //
+  // Multi Level dropdowns
+  // ------------------------------------------------------ //
+  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    $(this).siblings().toggleClass("show");
+
+
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+  });
+});
+				}
+    </script>
+  </body>
+</html>
