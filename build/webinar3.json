@@ -1,0 +1,20 @@
+{
+  "defaultcard": "full",
+  "displaychecked": true,
+  "tableofcontents": false,
+  "groups": {
+    "Presentations" : {
+      "comment": "",
+      "card": "presentation"}
+    	},
+	"list": [{
+	"groups": ["Presentations"],
+	"ptitle": "TaNC: Persistent Identifiers (Rachael Kotarski) & Locating a National Collection (Gethin Rees)",
+	"stitle": "",
+	"comment": "",
+	"video": "https://youtu.be/jLbK4E_ebMM",
+	"slides": "",
+	"link": ""
+} ]
+	
+}
