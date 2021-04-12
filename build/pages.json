@@ -7,24 +7,48 @@
 "about": {
   "class": "gallery",
   "file": "logos.json",
-  "title": "HeritagePIDs - Contributors",
+  "title": "Heritage PIDs - Contributors",
   "content": "<p>This project is a Foundation project within the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>",
   "content right": ""
   },
 "resources": {
-  "title": "HeritagePIDs - Resources",
+  "title": "Heritage PIDs - Resources",
   "content": "<p>This page will be updated throughout the project as new material becomes available.</p><p><b>Project Outputs</b></p><ul><li>Developing Identifiers for Heritage Collections <a href=\"https://tanc-ahrc.github.io/PIDResources/\">https://tanc-ahrc.github.io/PIDResources/</a></li><li>Project Interim Report <a href=\"https://www.nationalcollection.org.uk/interim\">https://www.nationalcollection.org.uk/interim</a></li><li>Webinar: Persistent Identifiers (Rachael Kotarski) & Locating a National Collection (Gethin Rees) <a href=\"https://youtu.be/jLbK4E_ebMM\">https://youtu.be/jLbK4E_ebMM</a></li><li>PIDs as IRO Infrastructure - Early Findings <a href=\"https://doi.org/10.23636/1214\">https://doi.org/10.23636/1214</a></li><li>Persistent Identifiers at the British Library <a href=\"https:\/\/doi.org\/10.23636\/1242\">https:\/\/doi.org\/10.23636\/1242<\/a><\/li><li>Persistent Identifiers at the National Gallery <a href=\"https:\/\/doi.org\/10.23636\/1243\">https:\/\/doi.org\/10.23636\/1243<\/a></li><li>Towards a National Collection: Persistent Identifiers as IRO Infrastructure Project Launch Webinar <a href=\"https:\/\/doi.org\/10.23636\/1174\">https:\/\/doi.org\/10.23636\/1174<\/a><\/li><li>Webinar: Identifiers in Heritage Collections - how embedded are they? <a href=\"https://doi.org/10.23636/1189\">https://doi.org/10.23636/1189<\/a><\/li><li>HeritagePIDs Zotero Group <a href=\"https:\/\/www.zotero.org\/groups\/2470432\/heritagepids\/\">https:\/\/www.zotero.org\/groups\/2470432\/heritagepids<\/a><\/li></ul><p><b>Blog Posts</b></p><p>See our <a href=\"https://tanc-ahrc.github.io/HeritagePIDs/Blog.html\">blog</a> for more blog posts and short case studies relevant to the project.</p><ul><li>When is a persistent identifier not persistent? Or an identifier? <a href=\"https://blogs.bl.uk/digital-scholarship/2020/09/when-is-a-persistent-identifier-not-persistent-or-an-identifier.html\">https://blogs.bl.uk/digital-scholarship/2020/09/when-is-a-persistent-identifier-not-persistent-or-an-identifier.html</a></li><\/ul><p>This project is a Foundation project within the <a href=\"https:\/\/ahrc.ukri.org\/\">AHRC<\/a> funded <a href=\"https:\/\/ahrc.ukri.org\/research\/fundedthemesandprogrammes\/tanc-opening-uk-heritage-to-the-world\/\">Towards a National Collection Programme<\/a>.<\/p>", 
   "content right": ""
 },
+"Webinar 1": {
+	"parent": "resources",
+  "class": "list",
+  "file": "webinar1.json",
+	"title": "Towards a National Collection: Persistent Identifiers as IRO Infrastructure Project Launch Webinar",
+	"content": "<div class=\"alert alert-info\" role=\"alert\"><h4 class=\"alert-heading\">TPersistent Identifiers as IRO Infrastructure Project - Webinar #1<\/h4><p>This webinar launched the project in April 2020 and gave an overview of the project plans and connections between the PIDs as IRO Infrastructure project and other projects in the Towards a National Collection programme.</p><p>This Webinar took place on 6 April 2020.</p><\/div>[##]",
+	"content right": ""	
+},
+"Webinar 2": {
+	"parent": "resources",
+  "class": "list",
+  "file": "webinar2.json",
+	"title": "Webinar: Identifiers in Heritage Collections - how embedded are they?", 
+  "content": "<div class=\"alert alert-info\" role=\"alert\"><h4 class=\"alert-heading\">Persistent Identifiers as IRO Infrastructure - Webinar #2<\/h4><p>This webinar took place on 17 July 2020.</p><\/div><h2>About this Event</h2><p>Persistent Identifiers as IRO Infrastructure is an AHRC funded project as part of the Towards a National Collection programme.</p><p>In this second webinar for the project, the project team presented the initial results of a survey on the use of persistent identifiers in Heritage Organisations followed by a panel discussion of the results. Panel members included Rebecca Bailey, Programme Director, Towards a National Collection, Lorna Mitchell, Head of Library, Archives & Publications Royal Botanic Garden Edinburgh and Claudia Fabian from the International Standard Manuscript Identifier initiative. There was also a demonstration of a prototype tool from Prof Roderic Page, University of Glasgow to navigate between persistent identifiers across heritage collections.</p>[##]",	
+  "content right": ""	
+},
+  "Webinar 3": {
+	"parent": "resources",
+  "class": "list",
+  "file": "webinar3.json",
+	"title": "Webinar: Persistent Identifiers (Rachael Kotarski) & Locating a National Collection (Gethin Rees)",
+	"content": "<div class=\"alert alert-info\" role=\"alert\"><h4 class=\"alert-heading\">Persistent Identifiers as IRO Infrastructure - Webinar #3<\/h4><p>This webinar took place on 19 February 2021.</p><\/div>[##]",
+	"content right": ""	
+},
  "timeline": {
-   "title": "HeritagePIDs - Project Timeline",
-  "content": "<p>This timeline is provisional due to the COVID-19 pandemic and may be changed throughout the project. Last updated December 2020.</p><table class=\"table\"><thead><tr><th scope=\"col\">Date</th><th scope=\"col\">Milestone Type</th><th scope=\"col\">Detail</th></tr></thead><tbody><tr><td> April 2020 </td><td> Deliverable </td><td> Webinar #1 </td></tr><tr><td> September 2020 </td><td> Deliverable </td><td> Survey #1 Launched </td></tr><tr><td> July 2020 </td><td> Dissemination </td><td> Webinar #2 based on interim survey results </td></tr><tr><td> December 2020 </td><td> Dissemination </td><td> Case study #1 British Library </td></tr><tr><td> December 2020 </td><td> Deliverable </td><td> Case study #2 National Gallery </td></tr><tr><td> October 2020 </td><td> Deliverable </td><td> Interim report </td></tr><tr><td> January 2021 </td><td> Deliverable </td><td> Demonstrator tool: in beta </td></tr><tr><td> February 2021 </td><td> Deliverable </td><td> Project webinar #3. Online Workshop for Discovery phase applicants based on work to date </td></tr><tr><td> March 2021 </td><td> Deliverable </td><td> Case study #3 NHM </td></tr><tr><td> April 2021 </td><td> Dissemination </td><td> Project webinar #4. Summary of first year of project.  Consultation of 5* PIDs proposal </td></tr><tr><td> May 2021 </td><td> Deliverable </td><td> Case study #4 RBGE </td></tr><tr><td> August 2021 </td><td> Deliverable </td><td> Video summarising best practices </td></tr><tr><td> July 2021 </td><td> Deliverable </td><td> Workshop Edinburgh </td></tr><tr><td> October 2021 </td><td> Deliverable </td><td> Survey #2 </td></tr><tr><td> September 2021 </td><td> Dissemination </td><td> Project webinar #5. Joint with other foundation project </td></tr><tr><td> December 2021 </td><td> Dissemination </td><td> Final event </td></tr><tr><td> January 2022 </td><td> Deliverable </td><td> Final report </td></tr></tbody></table>",
+   "title": "Heritage PIDs - Project Timeline",
+  "content": "<p>This timeline is provisional due to the COVID-19 pandemic and is being updated throughout the project. Last updated April 2021.<\/p><table class=\"table\"><tr><th scope=\"col\">Date<\/th><th scope=\"col\">Milestone Type<\/th><th scope=\"col\">Detail<\/th><\/tr><tbody><tr><td>January 2020<\/td><td>Dissemination<\/td><td>PIDapalooza - lightning talk<\/td><\/tr><tr><td>April 2020<\/td><td>Dissemination&nbsp;Deliverable<\/td><td>RDA PID IG &ndash; lightning talk&nbsp;Webinar #1<\/td><\/tr><tr><td>May 2020<\/td><td><em>Deliverable<\/em><\/td><td>Survey #1 Launched<\/td><\/tr><tr><td>July 2020<\/td><td>Dissemination&nbsp;Deliverable<\/td><td>Webinar #2 based on interim survey results. Demonstrator tool: in beta<\/td><\/tr><tr><td>August 2020<\/td><td>Dissemination<\/td><td>Case study #1 &ndash; British Library&nbsp;<\/td><\/tr><tr><td>September 2020<\/td><td>Deliverable<\/td><td>Case study #2 &ndash; National Gallery<\/td><\/tr><tr><td>October 2020<\/td><td>Deliverable<\/td><td>Interim report<\/td><\/tr><tr><td>January 2021<\/td><td>Deliverable and Dissemination. Dissemination<\/td><td>Workshop based on survey and case studies # 1&amp;2PIDapalooza 2021<\/td><\/tr><tr><td>April 2021<\/td><td>Dissemination&nbsp;Deliverable<\/td><td>Public Webinar - first year of project summary.&nbsp;Consultation of Developing IDs for Heritage Collections&nbsp;Case study #3 &ndash; NHM<\/td><\/tr><tr><td>July 2021<\/td><td>Dissemination&nbsp;Deliverable<\/td><td>Workshop #4 &ndash; Edinburgh&nbsp;Launch full version of Developing IDs for Heritage Collections. Case study #4 &ndash; RBGE<\/td><\/tr><tr><td>August 2021<\/td><td>Deliverable<\/td><td>Video summarising best practices<\/td><\/tr><tr><td>September 2021<\/td><td><em>Dissemination<\/em><\/td><td><em>Webinar with IIIF project<\/em><\/td><\/tr><tr><td>October 2021<\/td><td>Dissemination<\/td><td>Survey #2 launched<\/td><\/tr><tr><td>December 2021<\/td><td>Dissemination&nbsp;Deliverable<\/td><td>Final event including survey #2 resultsFinal report<\/td><\/tr><\/tbody><\/table>",
    "content right": ""
 },
  "Blog": {
      "class": "list",
      "file": "blog-list.json",
-     "title": "HeritagePIDs - Blog",
+     "title": "Heritage PIDs - Blog",
      "content": "",
      "content right": ""
  },
