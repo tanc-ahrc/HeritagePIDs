@@ -1,0 +1,36 @@
+{
+  "defaultcard": "full",
+  "displaychecked": true,
+  "tableofcontents": false,
+  "groups": {
+    "Presentations" : {
+      "comment": "",
+      "card": "presentation"}
+    	},
+	"list": [{
+	"groups": ["Presentations"],
+	"ptitle": "Introduction and Welcome",
+	"stitle": "Rachael Kotarski",
+	"comment": "",
+	"video": "https://drive.google.com/file/d/1GCzOhQECXi7uuPPT4O_15ntA6cKWBlMT/view?usp=sharing",
+	"slides": "file/HeritagePIDs Webinar1 - Intro - Kotarski.pdf",
+	"link": "https:\/\/twitter.com\/RachPK"
+}, {
+	"groups": ["Presentations"],
+	"ptitle": "Working towards Persistent Identifiers in the National Gallery, London.",
+	"stitle": "Joseph Padfield",
+	"video": "https://drive.google.com/file/d/10UJxuJwGM83QeeNKK_Hp5pp3Ex4SMqaN/view?usp=sharing",
+	"comment": "",
+	"slides": "file/HeritagePIDs Webinar1 - Intro - Kotarski.pdf",
+  "link": "https://twitter.com/JoePadfield"
+}, {
+	"groups": ["Presentations"],
+	"ptitle": "Heritage Connector: Transforming Text into Data to Extract Meaning and Make Connections",
+	"stitle": "John Stack",
+	"video": "https://drive.google.com/file/d/1UW4sI00e8C2suOew6zz1DkP7M2L4JnY_/view?usp=sharing",
+	"slides": "file/HeritagePIDs Webinar 1 - Hertiage Connector - Stack.pdf",
+  "comment": "",
+	"link": ""
+} ]
+	
+}
