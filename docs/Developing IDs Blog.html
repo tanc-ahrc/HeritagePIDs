@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Persistent Identifier, HeritagePIDs, Focused Foundation project funded by the AHRC as part of the Towards a National Collection Programme." />
+		<meta name="keywords" content="AHRC, TANC, Towards and National Collection, PIDs, Persistent Identifiers, Research, Heritage, Culture, PHP, Javascript, Github Pages" />
+    <meta name="author" content="Joseph Padfield| joseph.padfield@ng-london.org.uk |National Gallery | London UK | website@ng-london.org.uk |www.nationalgallery.org.uk" />
+    <link rel="icon" href="https://www.ukri.org/ukri/includes/themes/ukri/images/favicon.ico">
+    <title>TANC HeritagePIDs</title>
+    
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+    
+    </style>
+  </head>
+
+  <body onload="onLoad();">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <a class="navbar-brand"  href="./">
+  		<img id="page-logo" class="logo" title="Logo" src="graphics/TaNC-logo-rev-wh-RGB.png" 
+				style="" alt="The National Gallery"/>
+		  </a>
+			<div class="collapse navbar-collapse" id="navbarsExampleDefault"><ul class="navbar-nav">
+<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li><li class="nav-item "><a class="nav-link" href="about.html">About</a></li><li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item "><a class="nav-link" href="timeline.html">Timeline</a></li><!-- Dropdown Loop 1 --><li class="nav-item dropdown active"><a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle" title="Click to open the Blog menu" >Blog<span class="sr-only">(current)</span></a><ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow"><li><a href="Blog.html" class="dropdown-item top-item" title="Click to open the Blog page">Blog</a></li><li class="dropdown-divider"></li><li><a href="LCD%20Blog.html" class="dropdown-item">LCD Blog</a></li><li><a href="V&A%20Case%20Study.html" class="dropdown-item">V&A Case Study</a></li><li><a href="PIDs%20for%20Places.html" class="dropdown-item">PIDs for Places</a></li><li><a href="Archives%20Hub.html" class="dropdown-item">Archives Hub</a></li><li><a href="Developing%20IDs%20Blog.html" class="dropdown-item">Developing IDs Blog</a></li></ul></li><!-- End Loop 1 --></ul></div>
+			
+    <span class="navbar-text">
+      			<a href="https://github.com/tanc-ahrc/HeritagePIDs/">
+				<img id="ex-logo1" class="logo" title="github" src="graphics/github logo white.png" 
+				style="" alt="GitHub TANC Heritage PIDs"/>
+		  </a>
+    </span>
+    </nav>
+			<div class="row ">				
+			 <div class="col-12 col-md-12">          
+				
+				<div class="jumbotron"><h2><b>Developing "Developing Identifiers for Heritage Collections"</b></h2></div><div class="row"><div class="col-12 col-lg-12">		<nav aria-label="breadcrumb">
+			<ol class="breadcrumb">
+				<li class="breadcrumb-item"><a href="Blog.html">Blog</a></li>
+			</ol>
+		</nav></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p><i>Frances Madden <a href="http://orcid.org/0000-0002-5432-6116">(orcid.org/0000-0002-5432-6116)</a></i></p><p>Posted 21 April 2021.</p><p>On 21 April the Heritage PIDs project held a workshop where we launched a new resource - <a href='https://tanc-ahrc.github.io/PIDResources/'>Developing Identifiers for Heritage Collections</a>. This resource was developed following the findings of the survey the project ran throughout summer 2020. The findings of the survey were that respondents generally knew about PIDs but they weren't sure what to do next. In response to this the project decided to develop a matrix of requirements for PIDs at different levels of complexity so heritage professionals could see examples of 'end goals'. The original idea was to develop something similar to 5* Linked Open Data but the idea grew a lot along the way!</p><h4>What did we do?</h4><p>We started with the idea of 'levels' of PID implementation, starting with something very simple moving through increasing levels of complexity. To work out what these different levels are, we held a project workshop in January 2021 where we gathered as many use cases as possible using a Kanban exercise on a Miro board. In total over 100 use cases of where and when PIDs can be used in a cultural heritage setting and how they can help professionals in their work. A Kanban exercise allows participants to refine and iterate ideas. Participants in the workshop brought at least five use cases to the workshop. During the Kanban exercise we went around in a virtual circle iterating on each other's ideas. As you can see from the image, it got quite messy!</p>
+    <figure class="figure"><img src="graphics/workshop03.png" class="figure-img img-fluid rounded" alt="Screenshot of categorised use cases for PIDs"><figcaption class="figure-caption">Screenshot of categorised use cases for PIDs</figcaption></figure><p>Following the workshop, these were sorted into different categories and based on the frequency with which they occurred importance was assigned to these various levels.</p><p>The categories were:</p>
+    <ul><li>Interoperability</li><li>Where, what and how of collections</li>
+	   <li>Long-term-ness</li><li>Versioning</li></ul>
+     <figure class="figure"><img src="graphics/workshop01.png" class="figure-img img-fluid rounded" alt="Screenshot of categorised use cases for PIDs"><figcaption class="figure-caption">Screenshot of categorised use cases for PIDs</figcaption></figure>
+     <p>By far the vast majority of use cases related to the 'Interoperability' theme. Interoperability represents a collection of different categories which were eventually grouped together.</p>
+	    <ul><li>Cross-linking</li><li>Cross-searching</li>
+      <li>Aggregation</li> <li>Machine Readability</li></ul>
+      <p>The Where, what and how of collections also had several sub-categories:</p>
+	     <ul><li>Citation</li>
+       <li>Reporting</li>
+       <li>Collection information</li></ul>
+       <figure class="figure"><img src="graphics/workshop02.png" class="figure-img img-fluid rounded" alt="Screenshot of categorised use cases for PIDs"><figcaption class="figure-caption">Screenshot of categorised use cases for PIDs</figcaption></figure>
+       <p>Based on these categories, the following levels were determined as a first iteration of the level of PIDs.</p>
+       <table class="table">
+       <thead>
+       <tr>
+       <th scope="col">Level</th>
+       <th scope="col">Description</th>
+       </tr>
+       </thead>
+       <tbody>
+       <tr><th scope="row">1</th>
+       <td>Externally-created persistent identifiers are included for items and entities within metadata.</td>
+       </tr>
+       <tr><th scope="row">2</th>
+       <td>
+       Items and entities are assigned identifiers which could be machine readable and persistent.
+       </td>
+       </tr>
+       <tr><th scope="row">3</th>
+       <td>
+       Items and entities are assigned identifiers which are externally resolvable in a human readable format. 
+       </td>
+       </tr>
+       <tr><th scope="row">4</th>
+       <td>
+       Items and entities are assigned identifiers which are resolvable in a machine readable format.  
+       </td>
+       </tr>
+       <tr><th scope="row">5</th>
+       <td>
+       Items and entities are assigned globally persistent, universally resolvable and maintained identifiers. 
+       </td>
+       </tr>
+      </tbody>
+      </table>
+       <p>When the project discussed these levels as a whole, several issues came up. It became clear we needed to establish a baseline implementation so, a Level 0. It also became clear that these levels were never going to be an entirely linear progression and we also needed to acknowledge that an institutional commitment to persistence was needed.</p>
+       <p>While we had hoped that we could hold all the information needed for this resource within a table, it became clear that there was too much information for anything readable to be created. We felt it was important we gave an explanation for what we meant and that we communicated the benefits of each level. We also wanted to be able to map these against different PID types which met this criteria.</p>
+       <p>The next version was more akin to what we have now. Rather than focusing on different levels we decided to focus on the different aspects of implementing persistent identifiers and how it can be done. We tried to have a standard layout which focuses on the potential benefits, the risks and dependencies as well as linking to examples of similar implementations from other cultural heritage organisations. In addition to the pages outlining the different aspects we have also included mappings of use cases to the different aspects as well as listing different PID types and how they meet the different aspects.</p>
+       <p>In parallel we were discussing how we may gain feedback for this resource and how to publish it. We decided that Github would provide a useful way to track comments and changes to the resource. Anyone using the resource could raise a Github issue describing any changes or comments they had for the resource. As you need a Github account to raise an issue, we also decided to use another feedback tool, <a href='https://usersnap.com/'>Usersna</a>, where you can select a section of the screen and leave comments or suggestions.</p>
+       <h4>What's next?</h4>
+       <p>This resource is open for consultation until end May 2021 at which point we will update it. We will continue to update this resource throughout 2021 until the end of the Heritage PIDs project. It will be updated on a best efforts basis after that until the end of the Towards a National Collection to reflect the changes in the environment which we hope take place.</p>
+       <p>The next stage for us is to compile guidance about how to develop each of these aspects. We would love to hear from you with your implementations and examples. If you have something to share, please fill in this <a href='https://forms.gle/CS3pYboPXWo7oCUo6'>Google Form</a>.</p>
+       <h4>What you can do? </h4>
+       <p>Please have a look at the resource and leave any comments. If you use it to inform your decision making, let us know!</p><div class="foonote"><ul></ul></div></div><!--/span--></div><!--/row-->    <br/>
+			</div><!--/span-->
+			
+			
+			</div><!--/row-->
+			
+			  <footer>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-5" style="text-align:left;"><a href="https://ahrc.ukri.org/research/fundedthemesandprogrammes/tanc-opening-uk-heritage-to-the-world//"><img alt="AHRC TANC" style="border-width:0;height:31px;" src="graphics/TANC_03.png"></a></div>
+				<div class="col-2" style="text-align:center;"></div>
+				<div class="col-5" style="text-align:right;"><a href='http://rightsstatements.org/vocab/InC-EDU/1.0/'><img height='16' alt='In Copyright - Educational Use Permitted' title='In Copyright - Educational Use Permitted' src='graphics/InC-EDU.dark-white-interior-blue-type.png'/></a><a rel='license' href='https://creativecommons.org/licenses/by-nc/4.0/'><img alt='Creative Commons Licence' style='border-width:0' src='https://i.creativecommons.org/l/by-nc/4.0/88x31.png' /></a></div>
+			</div>
+		</div>        
+  </footer>
+    </div><!--/.container-->
+    
+    
+	<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
+	<script src="https://unpkg.com/tether@1.4.7/dist/js/tether.min.js"></script>
+	<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+			
+			function onLoad() {
+				$(function() {
+  // ------------------------------------------------------- //
+  // Multi Level dropdowns
+  // ------------------------------------------------------ //
+  $("ul.dropdown-menu [data-toggle='dropdown']").on("click", function(event) {
+    event.preventDefault();
+    event.stopPropagation();
+
+    $(this).siblings().toggleClass("show");
+
+
+    if (!$(this).next().hasClass('show')) {
+      $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+    }
+    $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+      $('.dropdown-submenu .show').removeClass("show");
+    });
+
+  });
+});
+				}
+    </script>
+  </body>
+</html>
