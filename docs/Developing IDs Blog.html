@@ -6,29 +6,48 @@
     <meta name="description" content="Persistent Identifier, HeritagePIDs, Focused Foundation project funded by the AHRC as part of the Towards a National Collection Programme." />
 		<meta name="keywords" content="AHRC, TANC, Towards and National Collection, PIDs, Persistent Identifiers, Research, Heritage, Culture, PHP, Javascript, Github Pages" />
     <meta name="author" content="Joseph Padfield| joseph.padfield@ng-london.org.uk |National Gallery | London UK | website@ng-london.org.uk |www.nationalgallery.org.uk" />
+    <meta name="image" content="" />
     <link rel="icon" href="https://www.ukri.org/ukri/includes/themes/ukri/images/favicon.ico">
-    <title>TANC HeritagePIDs</title>
+    <title>TANC HeritagePIDs - Developing IDs Blog</title>
     
-	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-	<link href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.3/css/all.min.css" integrity="sha256-2H3fkXt6FEmrReK448mDVGKb3WW2ZZw35gI7vqHOE4Y=" crossorigin="anonymous" rel="stylesheet" type="text/css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css" integrity="sha256-BNdodQbWHpU3HT8xGhkEusT4ch4HEjvwzcbDcVuHR+E=" crossorigin="anonymous" rel="stylesheet" type="text/css">
 	<link href="css/main.css" rel="stylesheet" type="text/css">
     <style>
     
     </style>
+    
   </head>
 
   <body onload="onLoad();">
 		<div class="container">
 			<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+<div class="container-fluid">
+      <button 
+				class="navbar-toggler navbar-toggler-right" 
+				type="button" 
+				data-bs-toggle="collapse" 
+				data-bs-target="#navbarsExampleDefault" 
+				aria-controls="navbarsExampleDefault" 
+				aria-expanded="false" 
+				aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
-      </button>
+      </button>    
       <a class="navbar-brand"  href="./">
   		<img id="page-logo" class="logo" title="Logo" src="graphics/TaNC-logo-rev-wh-RGB.png" 
 				style="" alt="The National Gallery"/>
 		  </a>
 			<div class="collapse navbar-collapse" id="navbarsExampleDefault"><ul class="navbar-nav">
-<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li><li class="nav-item "><a class="nav-link" href="about.html">About</a></li><li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item "><a class="nav-link" href="timeline.html">Timeline</a></li><!-- Dropdown Loop 1 --><li class="nav-item dropdown active"><a id="dropdownMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle" title="Click to open the Blog menu" >Blog<span class="sr-only">(current)</span></a><ul aria-labelledby="dropdownMenu1" class="dropdown-menu border-0 shadow"><li><a href="Blog.html" class="dropdown-item top-item" title="Click to open the Blog page">Blog</a></li><li class="dropdown-divider"></li><li><a href="LCD%20Blog.html" class="dropdown-item">LCD Blog</a></li><li><a href="V&A%20Case%20Study.html" class="dropdown-item">V&A Case Study</a></li><li><a href="PIDs%20for%20Places.html" class="dropdown-item">PIDs for Places</a></li><li><a href="Archives%20Hub.html" class="dropdown-item">Archives Hub</a></li><li><a href="Developing%20IDs%20Blog.html" class="dropdown-item">Developing IDs Blog</a></li></ul></li><!-- End Loop 1 --></ul></div>
+<li class="nav-item "><a class="nav-link" href="index.html">Home</a></li><li class="nav-item "><a class="nav-link" href="about.html">About</a></li><li class="nav-item "><a class="nav-link" href="resources.html">Resources</a></li><li class="nav-item "><a class="nav-link" href="timeline.html">Timeline</a></li>
+<li class="nav-item dropdown active">
+<!-- Dropdown Loop 1 -->
+<div class="btn-group">
+  <a href="Blog.html"><button type="button" class="btn nav-link" title="Click to open the &ldquo;Blog&rdquo; page">
+  Blog<span class="sr-only">(current)</span></button></a>
+  <button type="button" class="btn nav-link dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false"  title="Click to open the &ldquo;Blog&rdquo; menu">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu"><li><a href="LCD%20Blog.html" class="dropdown-item">LCD Blog</a></li><li><a href="V&A%20Case%20Study.html" class="dropdown-item">V&A Case Study</a></li><li><a href="PIDs%20for%20Places.html" class="dropdown-item">PIDs for Places</a></li><li><a href="Archives%20Hub.html" class="dropdown-item">Archives Hub</a></li><li><a href="Developing%20IDs%20Blog.html" class="dropdown-item">Developing IDs Blog</a></li></ul></li><!-- End Loop 1 --></ul></div></li>
 			
     <span class="navbar-text">
       			<a href="https://github.com/tanc-ahrc/HeritagePIDs/">
@@ -36,15 +55,19 @@
 				style="" alt="GitHub TANC Heritage PIDs"/>
 		  </a>
     </span>
+</div>
     </nav>
 			<div class="row ">				
 			 <div class="col-12 col-md-12">          
 				
-				<div class="jumbotron"><h2><b>Developing "Developing Identifiers for Heritage Collections"</b></h2></div><div class="row"><div class="col-12 col-lg-12">		<nav aria-label="breadcrumb">
+				<div class="p-2 bg-light border rounded-3 jumbotron">
+      <div class="container-fluid py-4"><h3><b>Developing "Developing Identifiers for Heritage Collections"</b></h3></div></div><div class="row"><div class="col-12 col-lg-12">		<div class="alert alert-light" role="alert" style="padding-bottom: 0px;border-color:#dee2e6;">
+		<nav  style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb">
 			<ol class="breadcrumb">
-				<li class="breadcrumb-item"><a href="Blog.html">Blog</a></li>
+				<li class="breadcrumb-item"><a href="Blog.html">Blog</a></li><li class="breadcrumb-item active" aria-current="page">Developing IDs Blog</li>
 			</ol>
-		</nav></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p><i>Frances Madden <a href="http://orcid.org/0000-0002-5432-6116">(orcid.org/0000-0002-5432-6116)</a></i></p><p>Posted 21 April 2021.</p><p>On 21 April the Heritage PIDs project held a workshop where we launched a new resource - <a href='https://tanc-ahrc.github.io/PIDResources/'>Developing Identifiers for Heritage Collections</a>. This resource was developed following the findings of the survey the project ran throughout summer 2020. The findings of the survey were that respondents generally knew about PIDs but they weren't sure what to do next. In response to this the project decided to develop a matrix of requirements for PIDs at different levels of complexity so heritage professionals could see examples of 'end goals'. The original idea was to develop something similar to 5* Linked Open Data but the idea grew a lot along the way!</p><h4>What did we do?</h4><p>We started with the idea of 'levels' of PID implementation, starting with something very simple moving through increasing levels of complexity. To work out what these different levels are, we held a project workshop in January 2021 where we gathered as many use cases as possible using a Kanban exercise on a Miro board. In total over 100 use cases of where and when PIDs can be used in a cultural heritage setting and how they can help professionals in their work. A Kanban exercise allows participants to refine and iterate ideas. Participants in the workshop brought at least five use cases to the workshop. During the Kanban exercise we went around in a virtual circle iterating on each other's ideas. As you can see from the image, it got quite messy!</p>
+		</nav>
+		</div></div><!--/span--></div><!--/row-->    <div class="row"><div class="col-12 col-lg-12"><p><i>Frances Madden <a href="http://orcid.org/0000-0002-5432-6116">(orcid.org/0000-0002-5432-6116)</a></i></p><p>Posted 21 April 2021.</p><p>On 21 April the Heritage PIDs project held a workshop where we launched a new resource - <a href='https://tanc-ahrc.github.io/PIDResources/'>Developing Identifiers for Heritage Collections</a>. This resource was developed following the findings of the survey the project ran throughout summer 2020. The findings of the survey were that respondents generally knew about PIDs but they weren't sure what to do next. In response to this the project decided to develop a matrix of requirements for PIDs at different levels of complexity so heritage professionals could see examples of 'end goals'. The original idea was to develop something similar to 5* Linked Open Data but the idea grew a lot along the way!</p><h4>What did we do?</h4><p>We started with the idea of 'levels' of PID implementation, starting with something very simple moving through increasing levels of complexity. To work out what these different levels are, we held a project workshop in January 2021 where we gathered as many use cases as possible using a Kanban exercise on a Miro board. In total over 100 use cases of where and when PIDs can be used in a cultural heritage setting and how they can help professionals in their work. A Kanban exercise allows participants to refine and iterate ideas. Participants in the workshop brought at least five use cases to the workshop. During the Kanban exercise we went around in a virtual circle iterating on each other's ideas. As you can see from the image, it got quite messy!</p>
     <figure class="figure"><img src="graphics/workshop03.png" class="figure-img img-fluid rounded" alt="Screenshot of categorised use cases for PIDs"><figcaption class="figure-caption">Screenshot of categorised use cases for PIDs</figcaption></figure><p>Following the workshop, these were sorted into different categories and based on the frequency with which they occurred importance was assigned to these various levels.</p><p>The categories were:</p>
     <ul><li>Interoperability</li><li>Where, what and how of collections</li>
 	   <li>Long-term-ness</li><li>Versioning</li></ul>
@@ -117,9 +140,9 @@
     </div><!--/.container-->
     
     
-	<script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
-	<script src="https://unpkg.com/tether@1.4.7/dist/js/tether.min.js"></script>
-	<script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/tether@2.0.0/dist/js/tether.min.js" integrity="sha256-cExSEm1VrovuDNOSgLk0xLue2IXxIvbKV1gXuCqKPLE=" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha256-d+FygkWgwt59CFkWPuCB4RE6p1/WiUYCy16w1+c5vKk=" crossorigin="anonymous"></script>
     <script>
 			
 			function onLoad() {
