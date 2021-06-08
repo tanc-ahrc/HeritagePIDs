@@ -7,6 +7,7 @@
 
 .jumbotron {
 	margin-top: 80px;
+	margin-bottom: 20px;
 	}
 
 .licence {
@@ -22,6 +23,14 @@ img.logo {
 	height:32px;
 	}
 
+pre code {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
+	}
 /*
 *
 * ==========================================
@@ -29,6 +38,10 @@ img.logo {
 * ==========================================
 *
 */
+
+.dropdown div a {
+  text-decoration: none; !important;  
+}
 
 .top-item {
 	background-color: #e9ecef !important;
@@ -52,7 +65,7 @@ img.logo {
   float: none;
   vertical-align: 0em;
   border: none;
-  font-family: 'FontAwesome';
+  font-family: 'Font Awesome 5 Free';
 }
 
 .dropdown-submenu>.dropdown-menu {

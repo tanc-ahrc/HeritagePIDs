@@ -1,5 +1,7 @@
 <?php
 
+// Last update 21 Apr 2021
+
 $extensionList["gallery"] = "extensionGallery";
 
 function extensionGallery ($d, $pd)
@@ -59,7 +61,7 @@ img.secondary{
   max-height:96px;
 	}";
 
-    $d["content"] = positionExtraContent ($d["content"], $gcontent);
+    $d = positionExtraContent ($d, $gcontent);
 		}	
 
   return (array("d" => $d, "pd" => $pd));

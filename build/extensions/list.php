@@ -1,6 +1,6 @@
 <?php
 
-// Last update 24 Mar 2021
+// Last update 07 June 2021
 
 $extensionList["list"] = "extensionCards";
 $blank = array("groups" => array(), "ptitle" => "",
@@ -125,6 +125,7 @@ function extensionCards ($d, $pd)
   margin-right: auto;
   padding: 10px;
 }
+
 .card-img-top {
   width: auto;
   max-width: 100%;    
@@ -134,17 +135,21 @@ function extensionCards ($d, $pd)
   margin-right: auto;
   padding: 10px;
 }
+
 .nodec:link, .nodec:visited, .nodec:hover, .nodec:active {
   text-decoration: none;
   color: inherit;
   }
+
 .card-hov:hover {
   opacity: 0.7;
 }
+
 .offsetanchor {
   position: relative;
   top: -75px;
 }
+
 .pcontainer {
    position: relative;
    width: 100%;
@@ -160,6 +165,7 @@ function extensionCards ($d, $pd)
    width: 100%;
    height: 100%;
 	}
+
 ";
 
     // Check if a table of contents should be added.
@@ -169,7 +175,7 @@ function extensionCards ($d, $pd)
     else
       {$tb = "";}
       
-    $d["content"] = positionExtraContent ($d["content"], $tb.$gcontent);
+    $d = positionExtraContent ($d, $tb.$gcontent);
     }
 
   return (array("d" => $d, "pd" => $pd));
@@ -188,7 +194,8 @@ function buildFullCard ($la)
         
   ob_start();      
   echo <<<END
-<div class="card mb-3 $hclass" style="width: 100%;">
+
+<div class="card mb-3 $hclass">
   $ltop<div class="row no-gutters">
     <div class="col-md-4  my-auto" >
       <img src="$la[image]" class="card-img" alt="$la[ptitle]">
@@ -202,40 +209,7 @@ function buildFullCard ($la)
     </div>
   </div>$lbottom
 </div>
-END;
-    $html = ob_get_contents();
-    ob_end_clean(); // Don't send output to client
 
-    return ($html);
-    }
-
-function buildPresentationCardOLD ($la)
-  {   
-  if ($la["link"])
-    {$ltop= "<a href=\"$la[link]\" class=\"stretched-link nodec\">";
-      $lbottom = "</a>";
-      $hclass =  "card-hov";}
-  else
-    {$ltop= "";
-     $lbottom = "";
-     $hclass =  "";}
-        
-  ob_start();      
-  echo <<<END
-<div class="card mb-3 $hclass" style="width: 100%;">
-  $ltop<div class="row no-gutters">
-    <div class="col-md-4  my-auto" >
-      <img src="$la[image]" class="card-img" alt="$la[ptitle]">
-    </div>
-    <div class="col-md-8">
-      <div class="card-body">
-        <h4 class="card-title">$la[ptitle]</h4>
-        <h5 class="card-title">$la[stitle]</h5>
-        <p class="card-text">$la[comment]</p>
-      </div>
-    </div>
-  </div>$lbottom
-</div>
 END;
     $html = ob_get_contents();
     ob_end_clean(); // Don't send output to client
@@ -300,6 +274,7 @@ function buildPresentationCard ($la)
     </div>
   </div>
 </div>
+
 END;
     $html = ob_get_contents();
     ob_end_clean(); // Don't send output to client
@@ -313,7 +288,7 @@ function BS_ColClass ($max=3)
   if ($cno > 12) {$cno = 12;}
   if ($cno < 1) {$cno = 1;}
   $cno = intval(12/$cno);
-  $class = "col-".$cno;
+  $class = "col-lg-".$cno;
   return ($class);
   }
 
@@ -334,7 +309,7 @@ function buildSimpleCard ($la) {
   ob_start();      
   echo <<<END
       
-  <div class="$cc mb-4 $hclass";>
+  <div class="$cc col-md-6 col-sm-12  col-xs-12 mb-4 $hclass";>
     <div class="card" title="$la[ptitle]">
       $ltop
       <img class="card-img-top" src="$la[image]" alt="$la[ptitle]">
@@ -345,6 +320,7 @@ function buildSimpleCard ($la) {
       </div>
     </div>
   </div>
+
 END;
     $html = ob_get_contents();
     ob_end_clean(); // Don't send output to client
@@ -369,13 +345,14 @@ function buildImageCard ($la) {
   ob_start();      
   echo <<<END
     
-  <div class="$cc mb-4 $hclass">
+  <div class="$cc  col-md-6 col-sm-12  col-xs-12 mb-4 $hclass">
     <div class="card" title="$la[ptitle]">
       $ltop
       <img class="card-img-top" src="$la[image]" alt="$la[ptitle]">
       $lbottom
     </div>
   </div>
+
 END;
     $html = ob_get_contents();
     ob_end_clean(); // Don't send output to client
@@ -447,10 +424,12 @@ function startGroupHtml ($gnm, $comment, $card, $tbc)
       "row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5\">";}            
   else*/ if (in_array($card, array("list")))
     {$html = "$gtop<ul>";}              
-  else if (in_array($card, array("full", "presentation")))
+  /*else if (in_array($card, array("full", "presentation")))
     {$html = "$gtop<div class=\"card-column\">";}
   else //if (in_array($card, array("simple"))) or anything else
-    {$html = "$gtop<div class=\"card-deck\">";}
+    {$html = "$gtop<div class=\"card-deck\">";}*/
+  else //if (in_array($card, array("simple"))) or anything else
+    {$html = "$gtop<div class=\"row\">";}
 
   return ($html);
   }
