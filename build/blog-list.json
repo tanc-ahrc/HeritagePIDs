@@ -55,6 +55,14 @@
 	"image": "",
 	"checked": "",
 	"link": "https://tanc-ahrc.github.io/HeritagePIDs/Developing%20IDs%20Revisions.html"
+	},{
+  "groups": ["Posts"],
+	"ptitle": "Persistent identifiers in IIIF resources - how should they be used?",
+	"stitle": "",
+	"comment": "",
+	"image": "",
+	"checked": "",
+	"link": "https://tanc-ahrc.github.io/HeritagePIDs/PIDs%20and%20IIIF.html"
 }]
 	
 }
